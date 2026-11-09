@@ -1,0 +1,2026 @@
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="description" content="ونسة: ألعاب وأمثال وحكاوي من السودان"><meta name="theme-color" content="#8a1d33"><title>ونسة</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@500;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
+<style>html{color-scheme:light}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}img{max-width:100%}[hidden]{display:none!important}</style><style>
+/* Layout: phone-first single column, fixed bottom tab bar; Naskh for titles, Plex for reading and tapping.
+   Themes: نهاري (karkadeh on warm paper), ليلي (deep karkadeh), ليل النيل (navy night with stars). Tabag weave is the recurring Sudanese mark. */
+:root {
+  --bg: #faf3ee; --surface: #ffffff; --surface-2: #f5e7e1; --line: #e3cbc2;
+  --ink: #2c0a13; --muted: #6b4a4c; --accent: #8a1d33; --accent-ink: #ffffff;
+  --gold: #a56f0c; --green: #2e6b3f; --tab1: #8a1d33; --nile: #2f6d9a; --nile-soft: #9cc3de;
+  --good-bg: #e4f1dc; --good: #2b6418; --bad-bg: #fbe0da; --bad: #a3271a;
+  --stars: transparent;
+  --f-title: "Noto Naskh Arabic", "Amiri", "Traditional Arabic", serif;
+  --f-ui: "IBM Plex Sans Arabic", "Noto Sans Arabic", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #240910; --surface: #3a0f1b; --surface-2: #4b1726; --line: #6d2e3c;
+  --ink: #f7e8dc; --muted: #d2b2a8; --accent: #e9b455; --accent-ink: #2b0a12;
+  --gold: #e9b455; --green: #85c895; --tab1: #c4425d; --nile: #6aa7d4; --nile-soft: #3d6a8c;
+  --good-bg: #1e3c19; --good: #b6e39c; --bad-bg: #4d1717; --bad: #ff9c8c; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #240910; --surface: #3a0f1b; --surface-2: #4b1726; --line: #6d2e3c;
+  --ink: #f7e8dc; --muted: #d2b2a8; --accent: #e9b455; --accent-ink: #2b0a12;
+  --gold: #e9b455; --green: #85c895; --tab1: #c4425d; --nile: #6aa7d4; --nile-soft: #3d6a8c;
+  --good-bg: #1e3c19; --good: #b6e39c; --bad-bg: #4d1717; --bad: #ff9c8c; color-scheme: dark; }
+:root[data-wtheme="nile"] {
+  --bg: #0b1726; --surface: #12233a; --surface-2: #1a3150; --line: #29476a;
+  --ink: #eef3f8; --muted: #a9bccf; --accent: #ecbb5c; --accent-ink: #1a1206;
+  --gold: #ecbb5c; --green: #8fd0a0; --tab1: #d0566c; --nile: #7fb6e0; --nile-soft: #2c5378;
+  --good-bg: #173a2a; --good: #a8e6b8; --bad-bg: #42192a; --bad: #ff9fa8;
+  --stars: rgba(255,255,255,.55); color-scheme: dark; }
+
+* { box-sizing: border-box; }
+html { font-size: 100%; overflow-x: hidden; }
+html.fs1 { font-size: 114%; }
+html.fs2 { font-size: 130%; }
+body {
+  background: var(--bg); color: var(--ink);
+  font-family: var(--f-ui); font-size: 1.12rem; line-height: 1.75;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 10px calc(7rem + env(safe-area-inset-bottom, 0px));
+  overflow-x: hidden;
+  background-image:
+    radial-gradient(1.2px 1.2px at 12% 18%, var(--stars) 50%, transparent 51%),
+    radial-gradient(1px 1px at 72% 9%, var(--stars) 50%, transparent 51%),
+    radial-gradient(1.4px 1.4px at 40% 33%, var(--stars) 50%, transparent 51%),
+    radial-gradient(1px 1px at 88% 41%, var(--stars) 50%, transparent 51%),
+    radial-gradient(1.2px 1.2px at 23% 62%, var(--stars) 50%, transparent 51%),
+    radial-gradient(1px 1px at 60% 74%, var(--stars) 50%, transparent 51%),
+    radial-gradient(1.3px 1.3px at 92% 86%, var(--stars) 50%, transparent 51%);
+  background-attachment: fixed;
+}
+.app { max-width: 640px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.1rem; min-width: 0; }
+.app > * { min-width: 0; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+h1, h2, h3 { font-family: var(--f-title); font-weight: 700; margin: 0; line-height: 1.45; text-wrap: balance; }
+p { margin: 0; }
+.tabag { display: block; width: 100%; height: 12px; border-radius: 3px; }
+
+/* top bar */
+.top { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+.logo { font-family: var(--f-title); font-weight: 700; font-size: 2rem; color: var(--accent); line-height: 1.2; background: none; border: 0; padding: 0; cursor: pointer; }
+.top-r { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+.pill { display: inline-flex; align-items: center; gap: 6px; min-height: 2.7rem; padding: 0 .85rem; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); font-weight: 700; font-variant-numeric: tabular-nums; cursor: pointer; }
+.pill svg { width: 1.3rem; height: 1.3rem; }
+.cup-ic path { fill: var(--gold); }
+
+/* bottom nav */
+nav.tabs {
+  position: fixed; inset: auto 0 0 0; z-index: 20;
+  background: var(--surface); border-top: 1px solid var(--line);
+  padding: 6px max(6px, env(safe-area-inset-right, 0px)) calc(6px + env(safe-area-inset-bottom, 0px)) max(6px, env(safe-area-inset-left, 0px));
+}
+nav.tabs .in { max-width: 640px; margin: 0 auto; display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0,1fr); gap: 2px; }
+nav.tabs button { background: none; border: 0; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 6px 2px; border-radius: 14px; color: var(--muted); font-size: .8rem; font-weight: 600; min-height: 3.6rem; min-width: 0; }
+nav.tabs button span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+nav.tabs svg { width: 1.55rem; height: 1.55rem; flex: none; }
+nav.tabs button[aria-current="page"] { color: var(--accent); background: var(--surface-2); }
+
+/* generic */
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 22px; padding: 1.2rem 1.1rem; display: flex; flex-direction: column; gap: .9rem; min-width: 0; }
+.sec-h { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.sec-h h2 { font-size: 1.5rem; }
+.sec-h span { color: var(--muted); font-size: .95rem; }
+.muted { color: var(--muted); }
+.small { font-size: .95rem; }
+.btn { min-height: 3.4rem; padding: 0 1.5rem; border-radius: 999px; border: 0; cursor: pointer; font-weight: 700; background: var(--accent); color: var(--accent-ink); font-size: 1.12rem; display: inline-flex; align-items: center; justify-content: center; gap: 8px; }
+.btn.ghost { background: transparent; color: var(--ink); border: 2px solid var(--line); }
+.btn.block { width: 100%; }
+.btn:disabled { opacity: .5; cursor: default; }
+.back { align-self: flex-start; min-height: 2.8rem; padding: 0 1.1rem; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); cursor: pointer; font-weight: 600; }
+.bar { height: 10px; border-radius: 6px; background: var(--surface-2); overflow: hidden; }
+.bar i { display: block; height: 100%; background: var(--gold); border-radius: 6px; }
+.page-h { font-size: 1.9rem; }
+.stack { display: flex; flex-direction: column; gap: 10px; align-self: stretch; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 460px) { .two { grid-template-columns: 1fr; } }
+.speak { display: inline-flex; align-items: center; gap: 6px; min-height: 2.6rem; padding: 0 .9rem; border-radius: 999px; border: 1px solid var(--line); background: var(--surface-2); cursor: pointer; font-weight: 700; font-size: .95rem; align-self: flex-start; }
+.speak svg { width: 1.25rem; height: 1.25rem; }
+.row-h { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; }
+.toast { position: fixed; z-index: 30; left: max(16px, env(safe-area-inset-left, 0px)); right: max(16px, env(safe-area-inset-right, 0px)); bottom: calc(5.4rem + env(safe-area-inset-bottom, 0px)); max-width: 560px; margin: 0 auto; background: var(--ink); color: var(--bg); padding: .8rem 1rem; border-radius: 16px; font-weight: 600; text-align: center; }
+
+/* home */
+.hello { background: var(--surface); border: 1px solid var(--line); border-radius: 24px; overflow: hidden; }
+.hello .in { padding: 1rem 1.1rem 1.1rem; display: flex; flex-direction: column; gap: .25rem; }
+.hello h1 { font-size: 1.8rem; }
+.dates { color: var(--muted); font-size: .98rem; }
+.cta { display: grid; grid-template-columns: auto 1fr; gap: 14px; align-items: center; text-align: start; cursor: pointer; background: var(--accent); color: var(--accent-ink); border: 0; border-radius: 22px; padding: 1rem 1.1rem; width: 100%; }
+.cta .ic { width: 3.4rem; height: 3.4rem; border-radius: 16px; background: color-mix(in srgb, currentColor 16%, transparent); display: grid; place-items: center; }
+.cta .ic svg { width: 2.1rem; height: 2.1rem; }
+.cta b { font-family: var(--f-title); font-size: 1.35rem; display: block; line-height: 1.4; }
+.cta span { font-size: 1rem; opacity: .95; }
+.cta.c-green { background: #2e6b3f; color: #fff; }
+.cta.c-nile { background: #1f5f8b; color: #fff; }
+.cta.c-clay { background: #b4561f; color: #fff; }
+.cta.c-plum { background: #6a3a86; color: #fff; }
+.cta.done { background: var(--surface-2); color: var(--ink); cursor: default; }
+.say-card { background: var(--surface); border: 1px solid var(--line); border-radius: 22px; padding: 1.1rem; display: flex; flex-direction: column; gap: .45rem; }
+.say-card .tag { font-size: .9rem; font-weight: 700; color: var(--gold); }
+.say { font-family: var(--f-title); font-weight: 700; font-size: 1.7rem; line-height: 1.6; }
+.row-link { display: flex; justify-content: space-between; align-items: center; gap: 10px; text-align: start; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: .9rem 1rem; cursor: pointer; width: 100%; min-height: 3.6rem; }
+.row-link b { font-family: var(--f-title); font-size: 1.25rem; display: block; line-height: 1.4; }
+.row-link small { color: var(--muted); font-size: .95rem; display: block; }
+.row-link .chev { color: var(--muted); font-size: 1.4rem; }
+
+/* tiles */
+.tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 440px) { .tiles { grid-template-columns: 1fr; } }
+.tile { text-align: start; cursor: pointer; background: var(--surface); border: 1px solid var(--line); border-radius: 22px; padding: 1rem; display: flex; flex-direction: column; gap: .35rem; transition: border-color .2s, transform .1s; min-width: 0; }
+.tile:hover { border-color: var(--accent); }
+.tile:active { transform: scale(.985); }
+.mark { align-self: flex-start; min-width: 3.6rem; height: 3.6rem; padding: 0 .7rem; border-radius: 16px; display: grid; place-items: center; font-family: var(--f-title); font-weight: 700; font-size: 1.2rem; color: #fff; }
+.tile b { font-family: var(--f-title); font-size: 1.4rem; line-height: 1.4; }
+.tile .d { color: var(--muted); font-size: .98rem; }
+.tile .meta { display: flex; justify-content: space-between; gap: 8px; font-size: .88rem; font-weight: 600; color: var(--gold); font-variant-numeric: tabular-nums; flex-wrap: wrap; }
+
+/* play */
+.ghead { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; }
+.gtitle { font-family: var(--f-title); font-weight: 700; font-size: 1.55rem; }
+.prog { font-size: 1rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.track { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 4px; }
+.track span { height: 8px; border-radius: 4px; background: var(--line); }
+.track .ok { background: var(--good); } .track .no { background: var(--bad); } .track .now { background: var(--accent); }
+.turn { border-radius: 18px; padding: .8rem 1rem; font-weight: 700; font-size: 1.25rem; text-align: center; color: #fff; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { padding: .35rem .9rem; border-radius: 999px; background: var(--surface-2); font-weight: 600; font-size: 1rem; font-variant-numeric: tabular-nums; border: 2px solid transparent; }
+.chip.on { border-color: var(--accent); }
+.ask { font-size: 1.02rem; color: var(--muted); font-weight: 700; }
+.big { font-family: var(--f-title); font-weight: 700; font-size: clamp(2rem, 8.5vw, 2.7rem); line-height: 1.65; text-align: center; text-wrap: balance; }
+.big .blank { display: inline-block; min-width: 2.6em; border-bottom: 3px dashed var(--accent); color: var(--accent); }
+.big .fill { color: var(--accent); }
+.clue { font-family: var(--f-title); font-weight: 700; font-size: 1.4rem; text-align: center; text-wrap: balance; line-height: 1.75; }
+.opts { display: flex; flex-direction: column; gap: 10px; }
+.opts.tf, .opts.letters { flex-direction: row; flex-wrap: wrap; }
+.opts.tf .opt, .opts.letters .opt { flex: 1 1 40%; text-align: center; font-weight: 700; font-size: 1.3rem; }
+.opt { min-height: 3.6rem; width: 100%; text-align: start; cursor: pointer; background: var(--surface-2); border: 2px solid transparent; border-radius: 16px; padding: .6rem 1.1rem; font-size: 1.18rem; font-weight: 500; line-height: 1.55; }
+.opt:hover:not(:disabled) { border-color: var(--accent); }
+.opt:disabled { cursor: default; opacity: .55; }
+.opt.right { opacity: 1; background: var(--good-bg); border-color: var(--good); color: var(--good); font-weight: 700; }
+.opt.wrong { opacity: 1; background: var(--bad-bg); border-color: var(--bad); color: var(--bad); }
+.reveal { border-top: 1px solid var(--line); padding-top: 1rem; display: flex; flex-direction: column; gap: .6rem; animation: rise .35s ease; }
+.verdict { font-size: 1.3rem; font-weight: 700; }
+.verdict.ok { color: var(--good); } .verdict.no { color: var(--bad); }
+.reveal h3 { font-family: var(--f-ui); font-size: .95rem; color: var(--muted); font-weight: 600; }
+
+/* tartib */
+.slots { min-height: 4.4rem; border: 2px dashed var(--line); border-radius: 18px; padding: .6rem; display: flex; flex-wrap: wrap; gap: 8px; align-content: flex-start; }
+.slots.ok { border-color: var(--good); background: var(--good-bg); }
+.slots.no { border-color: var(--bad); background: var(--bad-bg); }
+.wpool { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+.word { min-height: 3.2rem; padding: 0 1rem; border-radius: 14px; border: 2px solid var(--line); background: var(--surface-2); cursor: pointer; font-family: var(--f-title); font-weight: 700; font-size: 1.35rem; }
+.word.placed { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.word:disabled { cursor: default; }
+.slots .hint { color: var(--muted); font-size: 1rem; align-self: center; padding: 0 .4rem; }
+
+/* pairs */
+.pgrid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 8px; }
+.pcard { min-height: 5.6rem; border-radius: 16px; border: 2px solid var(--line); cursor: pointer; padding: .4rem; font-weight: 700; font-size: 1.02rem; line-height: 1.45; display: grid; place-items: center; text-align: center; background: var(--surface); overflow-wrap: anywhere; }
+.pcard.back { background: repeating-linear-gradient(135deg, var(--tab1) 0 10px, var(--gold) 10px 20px, var(--ink) 20px 24px); border-color: var(--ink); }
+.pcard.word-c { font-family: var(--f-title); font-size: 1.3rem; }
+.pcard.open { border-color: var(--accent); }
+.pcard.done { background: var(--good-bg); border-color: var(--good); color: var(--good); cursor: default; }
+
+/* map */
+.map { background: var(--surface-2); border-radius: 18px; overflow: hidden; }
+.map svg { display: block; width: 100%; height: auto; }
+.map .lbl { font-family: var(--f-ui); font-weight: 700; fill: var(--ink); }
+.map .lbl-m { font-family: var(--f-ui); fill: var(--muted); }
+
+/* end */
+.end { text-align: center; align-items: center; }
+.end .num { font-size: 3.4rem; font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; line-height: 1.1; }
+.end .rank { font-family: var(--f-title); font-weight: 700; font-size: 1.8rem; }
+.earned { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; color: var(--gold); font-size: 1.15rem; }
+.earned svg { width: 1.6rem; height: 1.6rem; }
+.newb { background: var(--surface-2); border-radius: 18px; padding: .9rem; display: flex; gap: 12px; align-items: center; text-align: start; align-self: stretch; }
+.copied { color: var(--muted); font-size: 1rem; min-height: 1.5em; overflow-wrap: anywhere; }
+
+/* segmented */
+.seg { display: flex; flex-wrap: wrap; gap: 8px; }
+.seg button { min-height: 2.8rem; padding: 0 1rem; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); cursor: pointer; font-weight: 600; }
+.seg button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+
+/* library + forms */
+.search, .field input, .field select, .field textarea { width: 100%; min-height: 3.2rem; border-radius: 14px; border: 1px solid var(--line); background: var(--surface-2); padding: 0 1rem; font-size: 1.08rem; min-width: 0; }
+.search { background: var(--surface); }
+.field textarea { padding: .7rem 1rem; min-height: 7rem; resize: vertical; line-height: 1.7; }
+.entries { display: flex; flex-direction: column; gap: 10px; }
+.entry { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: .9rem 1rem; display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 4px 10px; }
+.entry .t { font-family: var(--f-title); font-weight: 700; font-size: 1.3rem; line-height: 1.6; overflow-wrap: anywhere; }
+.entry .m { grid-column: 1 / -1; font-size: 1.02rem; overflow-wrap: anywhere; }
+.entry .n { grid-column: 1 / -1; font-size: .98rem; color: var(--muted); overflow-wrap: anywhere; }
+.entry .got { grid-column: 1 / -1; font-size: .85rem; font-weight: 700; color: var(--gold); }
+.icon-btn { background: none; border: 0; cursor: pointer; width: 2.8rem; height: 2.8rem; border-radius: 50%; display: grid; place-items: center; color: var(--muted); }
+.icon-btn svg { width: 1.5rem; height: 1.5rem; }
+.icon-btn[aria-pressed="true"] { color: var(--tab1); }
+.icon-btn[aria-pressed="true"] path { fill: currentColor; }
+.empty { text-align: center; color: var(--muted); padding: 1.2rem 0; }
+.count { font-size: .95rem; color: var(--muted); }
+
+/* heritage */
+.arts { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 440px) { .arts { grid-template-columns: 1fr; } }
+.art-c { text-align: start; cursor: pointer; background: var(--surface); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column; padding: 0; min-width: 0; }
+.art-c .stripe { height: 8px; }
+.art-c .tx { padding: .8rem 1rem 1rem; display: flex; flex-direction: column; gap: .2rem; }
+.art-c b { font-family: var(--f-title); font-size: 1.35rem; }
+.art-c span { color: var(--muted); font-size: .95rem; }
+.art-c .rd { color: var(--gold); font-size: .85rem; font-weight: 700; }
+.article h1 { font-size: 2rem; }
+.article .lead { font-size: 1.15rem; color: var(--muted); }
+.article p { max-width: 62ch; }
+.factbox { background: var(--surface-2); border-radius: 18px; padding: 1rem; display: flex; flex-direction: column; gap: .3rem; }
+.factbox b { color: var(--gold); font-size: .95rem; }
+.ing { margin: 0; padding-inline-start: 1.3rem; display: flex; flex-direction: column; gap: .2rem; }
+.steps { margin: 0; padding-inline-start: 1.5rem; display: flex; flex-direction: column; gap: .5rem; }
+.steps li::marker { font-weight: 700; color: var(--gold); }
+.occ { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 4px 12px; align-items: center; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: .9rem 1rem; }
+.occ b { font-family: var(--f-title); font-size: 1.3rem; }
+.occ .left { text-align: center; background: var(--surface-2); border-radius: 14px; padding: .3rem .8rem; font-variant-numeric: tabular-nums; }
+.occ .left strong { display: block; font-size: 1.5rem; line-height: 1.2; color: var(--accent); }
+.occ .left span { font-size: .8rem; color: var(--muted); }
+.occ p { grid-column: 1 / -1; font-size: 1rem; }
+.occ .when { color: var(--muted); font-size: .95rem; }
+
+/* childhood */
+.kid-cat { display: flex; flex-direction: column; gap: 10px; }
+.kid { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: .9rem 1rem; display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 4px 12px; align-items: start; }
+.kid b { font-family: var(--f-title); font-size: 1.3rem; line-height: 1.5; }
+.kid p { grid-column: 1 / -1; font-size: 1.02rem; }
+.lived { min-height: 2.6rem; padding: 0 .9rem; border-radius: 999px; border: 2px solid var(--line); background: transparent; cursor: pointer; font-weight: 700; font-size: .95rem; white-space: nowrap; }
+.lived[aria-pressed="true"] { background: #2e6b3f; border-color: #2e6b3f; color: #fff; }
+
+/* danagla */
+.dan-hero { border-radius: 24px; overflow: hidden; background: #1f5f8b; color: #fff; }
+.dan-hero .in { padding: 1.3rem 1.2rem 1.4rem; display: flex; flex-direction: column; gap: .4rem; }
+.dan-hero h1 { font-size: 2.2rem; color: #fff; }
+.dan-hero p { font-size: 1.1rem; }
+.pride { display: flex; flex-wrap: wrap; gap: 8px; }
+.pride span { background: var(--surface-2); border-radius: 999px; padding: .35rem 1rem; font-weight: 600; }
+.dan-sec h2 { font-size: 1.45rem; }
+.timeline { display: flex; flex-direction: column; border-inline-start: 3px solid var(--gold); padding-inline-start: 1rem; }
+.timeline div { position: relative; padding-block: .45rem; }
+.timeline div::before { content: ""; position: absolute; inset-inline-start: calc(-1rem - 8px); top: 1rem; width: 13px; height: 13px; border-radius: 50%; background: var(--gold); border: 3px solid var(--surface); }
+.timeline b { display: block; color: var(--gold); font-size: .95rem; }
+
+/* family */
+.board { display: flex; flex-direction: column; gap: 8px; }
+.brow { display: grid; grid-template-columns: 2.4rem minmax(0,1fr) auto; gap: 10px; align-items: center; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: .7rem .9rem; }
+.brow.me { border: 2px solid var(--accent); }
+.brow .pos { width: 2.4rem; height: 2.4rem; border-radius: 50%; display: grid; place-items: center; font-weight: 700; background: var(--surface-2); font-variant-numeric: tabular-nums; }
+.brow .pos.p1 { background: #c99a2e; color: #2b1b00; }
+.brow .pos.p2 { background: #b8b8b8; color: #222; }
+.brow .pos.p3 { background: #b07148; color: #fff; }
+.brow b { display: block; font-size: 1.12rem; overflow-wrap: anywhere; }
+.brow small { color: var(--muted); font-size: .9rem; }
+.brow .c { font-weight: 700; color: var(--gold); font-variant-numeric: tabular-nums; display: inline-flex; align-items: center; gap: 4px; }
+.brow .c svg { width: 1.2rem; height: 1.2rem; }
+.story { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: .9rem 1rem; display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 4px 10px; }
+.story .t { font-family: var(--f-title); font-weight: 700; font-size: 1.25rem; overflow-wrap: anywhere; }
+.story .b { grid-column: 1 / -1; white-space: pre-wrap; overflow-wrap: anywhere; }
+.story .by { grid-column: 1 / -1; font-size: .88rem; color: var(--muted); }
+.cat-tag { display: inline-block; font-family: var(--f-ui); font-size: .8rem; font-weight: 700; padding: .1rem .6rem; border-radius: 999px; background: var(--surface-2); color: var(--gold); margin-inline-end: 6px; vertical-align: middle; }
+.notice { background: var(--surface-2); border-radius: 18px; padding: 1rem; display: flex; flex-direction: column; gap: .4rem; }
+
+/* me */
+.rank-card { background: var(--accent); color: var(--accent-ink); border-radius: 24px; padding: 1.2rem; display: flex; flex-direction: column; gap: .6rem; }
+.rank-card .r { font-family: var(--f-title); font-weight: 700; font-size: 1.9rem; line-height: 1.3; }
+.rank-card .bar { background: color-mix(in srgb, var(--accent-ink) 22%, transparent); }
+.rank-card .bar i { background: var(--accent-ink); }
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 10px; }
+.stat { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: .8rem .4rem; text-align: center; }
+.stat b { display: block; font-size: 1.55rem; font-variant-numeric: tabular-nums; line-height: 1.3; }
+.stat span { font-size: .85rem; color: var(--muted); }
+.badges { display: grid; grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr)); gap: 10px; }
+.badge { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: .8rem; text-align: center; display: flex; flex-direction: column; align-items: center; gap: .3rem; }
+.md { width: 3.4rem; height: 3.4rem; flex: none; }
+.badge b { font-size: 1rem; line-height: 1.4; }
+.badge span { font-size: .82rem; color: var(--muted); line-height: 1.4; }
+.badge.off { opacity: .5; }
+.badge.off .md { filter: grayscale(1); }
+.coll { display: flex; flex-direction: column; gap: 12px; }
+.coll-row { display: grid; grid-template-columns: minmax(6rem, 8rem) 1fr auto; gap: 10px; align-items: center; font-size: 1rem; }
+.coll-row span:last-child { font-variant-numeric: tabular-nums; color: var(--muted); }
+.opt-row { display: flex; gap: 8px; flex-wrap: wrap; }
+.opt-row button { min-height: 3rem; min-width: 4.6rem; padding: 0 1rem; border-radius: 14px; border: 1px solid var(--line); background: var(--surface); cursor: pointer; font-weight: 700; }
+.opt-row button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.confirm { background: var(--bad-bg); color: var(--bad); border-radius: 16px; padding: .9rem; display: flex; flex-direction: column; gap: .6rem; }
+.field { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.field label { font-weight: 600; font-size: 1rem; }
+.names { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+@media (max-width: 400px) { .names { grid-template-columns: 1fr; } }
+
+footer { text-align: center; color: var(--muted); font-size: .92rem; padding-top: .5rem; }
+@keyframes rise { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .reveal { animation: none; } .tile { transition: none; } }
+</style></head><body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <pattern id="weave" width="28" height="12" patternUnits="userSpaceOnUse">
+      <rect width="28" height="12" style="fill:var(--ink)"/>
+      <polygon points="0,12 7,0 14,12" style="fill:var(--tab1)"/>
+      <polygon points="14,12 21,0 28,12" style="fill:var(--gold)"/>
+      <polygon points="4.5,12 7,7.5 9.5,12" style="fill:var(--green)"/>
+      <polygon points="18.5,12 21,7.5 23.5,12" style="fill:var(--tab1)"/>
+    </pattern>
+  </defs>
+</svg>
+
+<div class="app" dir="rtl" lang="ar">
+  <svg class="tabag" preserveAspectRatio="none" viewBox="0 0 280 12" aria-hidden="true"><rect width="280" height="12" fill="url(#weave)"/></svg>
+  <div class="top">
+    <button class="logo" id="logo" aria-label="الرئيسية">ونسة</button>
+    <div class="top-r" id="top-r"></div>
+  </div>
+  <main id="stage" class="app" style="max-width:none;width:100%"></main>
+  <footer>ونسة · ألعاب وتراث من السودان<br>المعلومات مكتوبة بحب، وكل بيت عندو طريقتو في القول.</footer>
+</div>
+<nav class="tabs" aria-label="الأقسام" dir="rtl" lang="ar"><div class="in" id="tabs"></div></nav>
+<div id="toast-host" dir="rtl" lang="ar" aria-live="polite"></div>
+
+<script>
+/* ================= content ================= */
+const DATA = {
+  mathal: { title:"أكمل المثل", desc:"أمثال حبوباتنا، كمّل الناقص", ask:"كمّل المثل:", mk:"مثل", col:"#8a1d33", art:"bait",
+    items: [
+      { q:"عينك في الفيل", a:"وتطعن في ضُلّو", n:"تخلّي أصل المشكلة وتشتغل بحاجة جانبية لأنك خايف تواجه الكبيرة." },
+      { q:"سيد الرايحة", a:"بفتّش خشم البقرة", n:"الضاع منو شي غالي بفتّش في كل حتة، حتى الحتات الما معقولة." },
+      { q:"الخريف اللّين", a:"من بشايرو بيّن", n:"الحاجة الكويسة بتبيّن من أولها. والخريف عندنا هو موسم المطر." },
+      { q:"الجمل ما بشوف", a:"عوجة رقبتو", n:"الزول بيشوف عيوب الناس وما بيشوف عيبو هو." },
+      { q:"إيد على إيد", a:"تجدع بعيد", n:"لمّا الناس يتعاونوا يوصلوا لحاجات ما بوصلها زول براهو." },
+      { q:"الفي البرّ", a:"عوّام", n:"الكلام والنصيحة ساهلين للبعيد من المشكلة، والصعب على الجوّه الموية." },
+      { q:"القلم", a:"ما بزيل بَلَم", n:"القراية والشهادات ما بتدّي الزول عقل وحكمة لو ما عندو." },
+      { q:"المال تلتو", a:"ولا كتلتو", n:"خُت جزء من حقك أحسن من تتمسّك بالكل وتطلع بلا شي." },
+      { q:"التسوّي بإيدك", a:"يغلب أجاويدك", n:"الغلط العملتو بإيدك حتى الأجاويد، كبار الحلّة البيصالحوا الناس، ما بقدروا يصلحوهو." },
+      { q:"جدادة الخلا", a:"طردت جدادة البيت", n:"الجديد الجاي من برّه يزح أهل المكان الأصليين." },
+      { q:"الما بعرفك", a:"بجهلك", n:"الما بيعرف قيمتك بيقلّل منك، فما تزعل." },
+      { q:"الشينة", a:"منكورة", n:"العمل الشين ما في زول بيعترف بيهو، الكل بينكرو." },
+      { q:"الكلام ليك", a:"يا المنطّط عينيك", n:"كلام قاصدين بيهو زول معيّن قاعد، والفاهم بيفهم براهو." },
+      { q:"الما بتلحقو", a:"جدعو", n:"الحاجة الما قادر توصلها تعيبها وتقلّل منها." },
+      { q:"أبو القدح", a:"بعرف محل بعضّي رفيقو", n:"القريب منك بيعرف نقطة ضعفك وين." },
+      { q:"الجواب", a:"بكفيك عنوانو", n:"من أول الحاجة بتعرف آخرها، زي الجواب البيبيّن من عنوانو." },
+      { q:"كان اتنين قالو ليك راسك ما فيك", a:"المسو", n:"لمّا أكتر من زول يقول ليك نفس الملاحظة، راجع نفسك." },
+      { q:"البكا", a:"بحرّروه أهلو", n:"صاحب الشأن هو البيهتم بأمرو أكتر من أي زول." },
+      { q:"التور كان وقع", a:"بكترو سكاكينو", n:"لمّا الزول يقع في مشكلة الكل بيتلمّوا عليهو بالكلام واللوم." },
+      { q:"القرد في عين أمو", a:"غزال", n:"الأم بتشوف ولدها أجمل الناس مهما كان." },
+      { q:"شن تسوّي الماشطة", a:"في الوش العكر", n:"لو الأصل ما كويس، التجميل ما بيصلّحو كتير." },
+      { q:"الفي القِدرة", a:"بطلّعو المُغراف", n:"الجوّه الزول بيظهر في كلامو وأفعالو مهما خبّاهو." }
+    ] },
+  kalimat: { title:"كلمات سودانية", desc:"كلمة من كلامنا، معناها شنو؟", ask:"يعني شنو؟", mk:"زول", col:"#2e6b3f", art:"bait",
+    items: [
+      { q:"هسّي", a:"الآن", n:"زي: «أنا جاي هسّي»." },
+      { q:"زول", a:"شخص أو إنسان", n:"زي: «ده زول سمح»." },
+      { q:"شُفّع", a:"أطفال صغار", n:"زي: «الشفّع نايمين، اتكلم بشيش»." },
+      { q:"سمح", a:"جميل وطيب", n:"زي: «الأكل سمح شديد»." },
+      { q:"بشيش", a:"بهدوء وبراحة", n:"زي: «سوق بشيش، الشارع زحمة»." },
+      { q:"عديل", a:"مستقيم، طوّالي", n:"زي: «امشي عديل وبعدين لِف شمال»." },
+      { q:"ساي", a:"بدون سبب، بس كده", n:"زي: «جيت ساي أسلّم عليكم»." },
+      { q:"ياتو", a:"أيّ واحد", n:"زي: «ياتو واحد فيهم أخوك؟»." },
+      { q:"موية", a:"ماء", n:"زي: «أديني كباية موية»." },
+      { q:"داير", a:"أريد", n:"زي: «داير شاي باللبن»." },
+      { q:"قروش", a:"نقود", n:"زي: «القروش ما بتشتري المحبة»." },
+      { q:"شنو", a:"ماذا", n:"زي: «شنو الحاصل؟»." },
+      { q:"الحِلّة", a:"القرية أو الحي", n:"زي: «ناس الحلّة كلهم جو العرس»." },
+      { q:"ونسة", a:"دردشة وكلام حلو", n:"زي: «تعال نعمل ونسة مع الشاي»." },
+      { q:"تب", a:"أبداً، بالمرّة", n:"زي: «ما بمشي تب»." },
+      { q:"أمبارح", a:"أمس", n:"زي: «جيت أمبارح بالليل»." },
+      { q:"ما في عوجة", a:"ما في مشكلة", n:"زي: «اتأخرت شوية؟ ما في عوجة»." },
+      { q:"بِتّ", a:"بنت", n:"زي: «البت دي شاطرة»." },
+      { q:"حبّوبة", a:"الجدّة", n:"زي: «حبّوبتي بتحكي أحلى الحجاوي»." },
+      { q:"زهجان", a:"متضايق وملّان", n:"زي: «أنا زهجان من القعدة الطويلة»." },
+      { q:"نضيف", a:"كويس وممتاز", n:"زي: «الزول ده نضيف شديد»." },
+      { q:"متين", a:"متى", n:"زي: «متين جاي؟»." },
+      { q:"كيفنّك", a:"كيف حالك", n:"زي: «كيفنّك يا زول؟»." },
+      { q:"حُجوة", a:"حكاية", n:"زي: «حبّوبة حكت لينا حجوة فاطنة السمحة»." },
+      { q:"الدُّعاش", a:"نسمة المطرة وريحة الواطة", n:"زي: «الدعاش جا، المطرة قرّبت»." },
+      { q:"القمرة", a:"القمر", n:"زي: «الليلة القمرة تمام، نلعب شليل»." }
+    ] },
+  bait: { title:"من بيت الحبوبة", desc:"حاجات البيت والمطبخ زمان", ask:"ده شنو؟", mk:"جبنة", col:"#9a640a", art:"bait",
+    items: [
+      { q:"العنقريب", a:"سرير خشب منسوج بالحبال", n:"كان في كل حوش، والناس ينوموا فيهو برّه في ليالي الصيف." },
+      { q:"الجبنة", a:"إبريق قهوة من الفخار", n:"القهوة بتتصب منها في فناجين صغار، وهي لمّة الأهل والجيران." },
+      { q:"الكسرة", a:"خبز رقيق من دقيق العيش", n:"بتتعوس على الصاج وبتتاكل بالملاح." },
+      { q:"العصيدة", a:"عجينة من الدقيق بتتاكل بالملاح", n:"أكلة أساسية، ومشهورة في الفطور ورمضان." },
+      { q:"الزير", a:"جرّة فخار كبيرة لتبريد الموية", n:"كان في أبواب البيوت سبيل للماشي والجاي." },
+      { q:"الدلوكة", a:"طبل من الفخار مغطّى بالجلد", n:"بيدقّوها في أغاني البنات والأعراس." },
+      { q:"البرش", a:"حصير مصنوع من سعف النخيل", n:"بيتفرش في الحوش للقعدة والونسة." },
+      { q:"المفراكة", a:"عصاية خشب لفرك وخلط الملاح", n:"بيلفّوها بين الكفّين عشان الملاح يبقى ناعم." },
+      { q:"الطبق", a:"غطاء ملوّن منسوج من السعف للصينية", n:"بيغطّوا بيهو الأكل لحدّي ما الضيوف يقعدوا." },
+      { q:"التوب", a:"قماش طويل بتلتفّ بيهو المرأة السودانية", n:"لبس الأمهات والحبوبات، وألوانو بتختلف بالمناسبة." },
+      { q:"الكانون", a:"موقد صغير بالفحم", n:"عليهو بتتعمل الجبنة والشاي في الحوش." },
+      { q:"الراكوبة", a:"ضُلّة من الخشب والقش أو السعف", n:"بيقعدوا تحتها في الحرّ، وفيها الجبنة والونسة." },
+      { q:"المبخر", a:"إناء فخار لحرق البخور", n:"البخور ريحتو بتملا البيت في المناسبات وقعدة الجبنة." },
+      { q:"الكوز", a:"كوب معدن لشراب الموية", n:"بيكون جنب الزير، وبيشرب منو الكبير والصغير." },
+      { q:"الهبّابة", a:"مروحة يد منسوجة من السعف", n:"للهوا في الحر، ولتولّع نار الكانون." },
+      { q:"الفُندُك", a:"هون لدق البن والبهارات", n:"صوت دق البن في الفندك بيعلن إنو الجبنة قرّبت." },
+      { q:"الدِّلكة", a:"عجينة عطرية لتنعيم وتعطير الجلد", n:"من تجهيزات العروس السودانية المشهورة." },
+      { q:"الخُمرة", a:"خلطة عطر سودانية", n:"بتتعمل من عطور وزيوت، وبتستعملها العروس والنساء في المناسبات." },
+      { q:"الصاج", a:"صفيحة حديد مدوّرة للعواسة", n:"عليهو بتتعوس الكسرة والحلومر." },
+      { q:"الحلومُر", a:"مشروب رمضاني من الذرة والبهارات", n:"ريحتو بتعلن رمضان في البيوت، وفي ناس بسمّوهو الآبري الأحمر." },
+      { q:"البنبر", a:"كرسي صغير واطي منسوج بالحبال", n:"قعدة ستّات البيت جنب الكانون والجبنة." }
+    ] },
+  mudun: { title:"ربوع السودان", desc:"مدن بلدنا، تعرفها؟", ask:"ياتو مدينة؟", mk:"مدن", col:"#2f6d9a", art:"nile",
+    items: [
+      { q:"هنا بيلتقي النيل الأبيض والنيل الأزرق", a:"الخرطوم", n:"الملتقى اسمو المقرن، ومن هناك النيل يمشي شمال لحدّي مصر." },
+      { q:"العاصمة الوطنية، فيها سوق كبير وقبّة المهدي", a:"أم درمان", n:"قصاد الخرطوم على الضفة الغربية للنيل." },
+      { q:"الميناء الكبير على البحر الأحمر", a:"بورتسودان", n:"بوابة السودان للبحر والتجارة." },
+      { q:"مدينة الحديد والنار، عاصمة السكة حديد", a:"عطبرة", n:"عند التقاء نهر عطبرة بالنيل." },
+      { q:"عروس الرمال في كردفان", a:"الأبيض", n:"مشهورة بتجارة الصمغ العربي." },
+      { q:"تحت جبال التاكا في الشرق", a:"كسلا", n:"مشهورة بالسواقي والفواكه والطبيعة." },
+      { q:"عاصمة الجزيرة وقلب مشروع الجزيرة", a:"ود مدني", n:"على النيل الأزرق، والمشروع من أكبر مشاريع القطن." },
+      { q:"أهرامات البجراوية قريبة منها", a:"شندي", n:"في ولاية نهر النيل، والأهرامات من آثار مملكة مروي." },
+      { q:"عاصمة السلطنة الزرقاء وفيها خزّان", a:"سنار", n:"السلطنة الزرقاء هي مملكة الفونج زمان." },
+      { q:"على النيل الأبيض وفيها ميناء نهري", a:"كوستي", n:"البواخر كانت بتمشي منها جنوب." },
+      { q:"عاصمة الولاية الشمالية، بلد النخيل والتمر", a:"دنقلا", n:"بلد الدناقلة، على النيل، ومعروفة بالتمور والزراعة." },
+      { q:"عاصمة شمال دارفور", a:"الفاشر", n:"كانت عاصمة سلطنة دارفور زمان." },
+      { q:"عاصمة ولاية نهر النيل", a:"الدامر", n:"قريبة من عطبرة على النيل." },
+      { q:"جنب جبل البركل وآثار نبتة", a:"كريمة", n:"جبل البركل كان جبل مقدّس عند ملوك كوش." },
+      { q:"عاصمة جنوب دارفور", a:"نيالا", n:"من أكبر مدن غرب السودان." },
+      { q:"عاصمة غرب دارفور، قريبة من حدود تشاد", a:"الجنينة", n:"في أقصى غرب السودان." },
+      { q:"في جبال النوبة، عاصمة جنوب كردفان", a:"كادقلي", n:"جبال النوبة مشهورة بطبيعتها وتنوّع أهلها." },
+      { q:"عاصمة النيل الأزرق، قريبة من خزّان الروصيرص", a:"الدمازين", n:"في جنوب شرق السودان على النيل الأزرق." },
+      { q:"سلّة غذاء السودان، بلد الذرة والسمسم", a:"القضارف", n:"مشاريعها الزراعية الكبيرة بتأكّل جزء كبير من البلد." },
+      { q:"ميناء قديم على البحر الأحمر، بيوتو من حجر المرجان", a:"سواكن", n:"كانت أهم ميناء قبل بورتسودان." },
+      { q:"في أقصى الشمال، المدينة القديمة غرقت تحت بحيرة السد العالي", a:"وادي حلفا", n:"أهلها اترحّلوا وعمّروا حلفا الجديدة في الشرق." },
+      { q:"فيها الدفوفة، من أقدم حضارات أفريقيا", a:"كرمة", n:"مملكة كرمة من أقدم الممالك جنوب مصر، وقريبة من أرض الدناقلة." }
+    ] },
+  tarab: { title:"طرب سوداني", desc:"فنانين وأغاني وآلات", ask:"طرب سوداني:", mk:"طرب", col:"#6a3a86", art:"tarab",
+    items: [
+      { q:"مين غنّى «الطير المهاجر»؟", a:"محمد وردي", x:["عبد الكريم الكابلي","سيد خليفة","إبراهيم عوض"], n:"من كلمات الشاعر صلاح أحمد إبراهيم، ومن أشهر أغاني وردي." },
+      { q:"الفنان الملقّب بفنان أفريقيا الأول", a:"محمد وردي", x:["محمد الأمين","عثمان حسين","صلاح بن البادية"], n:"وردي من صواردة في النوبة، وغنّى بالعربي والنوبي." },
+      { q:"مين غنّى «إزيكم كيفنكم»؟", a:"سيد خليفة", x:["محمد وردي","عثمان حسين","مصطفى سيد أحمد"], n:"من أشهر الأغاني السودانية برّه السودان." },
+      { q:"مين غنّى «المامبو السوداني»؟", a:"سيد خليفة", x:["إبراهيم عوض","الكابلي","النعام آدم"], n:"أغنية خفيفة طلعت بيها سيرة الأغنية السودانية لبلاد بعيدة." },
+      { q:"مين غنّى «آسيا وأفريقيا»؟", a:"عبد الكريم الكابلي", x:["محمد وردي","سيد خليفة","خليل فرح"], n:"قصيدة الشاعر تاج السر الحسن، غنّاها الكابلي في زمن حركات التحرر." },
+      { q:"مين غنّى «عازة في هواك»؟", a:"خليل فرح", x:["كرومة","سرور","عائشة الفلاتية"], n:"عازة رمز للسودان، والأغنية من رموز الحركة الوطنية." },
+      { q:"الفنان الملقّب بالفنان الذرّي", a:"إبراهيم عوض", x:["محمد وردي","سيد خليفة","الكابلي"], n:"لقب جاه من حيويتو وطاقتو الكبيرة في المسرح." },
+      { q:"فنان غنّى قصائد كتيرة لشعراء جُدد، واتوفّى في الدوحة سنة ١٩٩٦", a:"مصطفى سيد أحمد", x:["محمد الأمين","عثمان حسين","زيدان إبراهيم"], n:"صوتو مرتبط عند جيل كامل بالكلمة العميقة." },
+      { q:"فنانة رائدة غنّت للجنود السودانيين في الحرب العالمية التانية", a:"عائشة الفلاتية", x:["حنان بلوبلو","البلابل","منى الخير"], n:"من أوائل الأصوات النسائية في الإذاعة السودانية." },
+      { q:"فرقة غنائية من تلاتة أخوات", a:"البلابل", x:["عقد الجلاد","الحقيبة","السمندل"], n:"هادية وآمال وحياة طلسم، أصواتهم ملت البيوت في السبعينات والتمانينات." },
+      { q:"فنان شايقي مشهور بالغناء بالطمبور", a:"النعام آدم", x:["محمد الأمين","الكابلي","وردي"], n:"الطمبور آلة الشمال المشهورة." },
+      { q:"أغاني الحقيبة سُمّيت على شنو؟", a:"برنامج «حقيبة الفن» في الإذاعة", x:["شنطة كان بيشيلها الفنان","سوق في أم درمان","مسرح قديم في الخرطوم"], n:"أغاني العشرينات والتلاتينات، ومن روادها خليل فرح وسرور وكرومة." },
+      { q:"آلة وترية تشبه القيثارة، مشهورة في الشمال", a:"الطمبور", x:["الدلوكة","النقارة","الوازا"], n:"ليها أوتار وصندوق مغطّى بالجلد." },
+      { q:"طبل كبير مشهور في كردفان ودارفور", a:"النقارة", x:["الطمبور","الربابة","الطار"], n:"صوتها بيلمّ الناس للمناسبات والرقص." },
+      { q:"الطبل البتدقّو البنات في أغاني البنات والأعراس", a:"الدلوكة", x:["النقارة","الطمبور","العود"], n:"مصنوعة من الفخار ومغطاة بالجلد." },
+      { q:"آلات نفخ من القرع، مشهورة في النيل الأزرق", a:"الوازا", x:["الطمبور","الدلوكة","الطار"], n:"بتتعزف مع بعض في جماعة، وليها إيقاع مميّز." },
+      { q:"السلّم الموسيقي في معظم الغناء السوداني", a:"الخماسي", x:["السباعي","التلاتي","العشري"], n:"وده البيخلّي الغناء السوداني قريب من موسيقى أفريقيا." },
+      { q:"شعر الرعاة في البطانة، عن الإبل والسفر والحنين", a:"الدوبيت", x:["المديح","الحقيبة","أغاني البنات"], n:"شعر بدوي قصير ليهو وزن وإيقاع خاص." },
+      { q:"غناء في مدح الرسول ﷺ، مشهور في الطرق الصوفية", a:"المديح", x:["الدوبيت","الحقيبة","الجرتق"], n:"ومن أشهر شعرائو حاج الماحي." },
+      { q:"الجملة اللي كانت الإذاعة السودانية بتبدأ بيها", a:"هنا أم درمان", x:["هنا الخرطوم","صوت السودان","هنا النيل"], n:"إذاعة أم درمان كانت بتجمع البلد كلها حول الراديو." }
+    ] },
+  alghaz: { title:"حجيتك ما بجيتك", desc:"ألغاز على طريقة الحبوبات", ask:"حجيتك ما بجيتك:", mk:"لغز", col:"#7a4a1f", art:null,
+    items: [
+      { q:"بيتو في ضهرو، وبيمشي بشيش، والدنيا ما بتستعجلو", a:"أبو القدح", n:"أبو القدح هو السلحفاة عندنا، ومنو المثل: أبو القدح بعرف محل بعضّي رفيقو." },
+      { q:"كل ما تشيل منها، تكبر", a:"الحفرة", n:"كل ما تحفر وتشيل التراب، الحفرة بتكبر." },
+      { q:"عندو سنون كتيرة، وما بعضّي زول", a:"المشط", n:"سنونو بتسرّح الشعر بس." },
+      { q:"عندها رقبة طويلة وبطن مدوّر، والناس بيقعدوا حولها العصر", a:"الجبنة", n:"وقعدة الجبنة هي أحلى ونسة." },
+      { q:"بيمشي معاك في النهار، ويختفي بالليل", a:"الضُّل", n:"ضلّك ما بيفارقك طول ما الشمس طالعة." },
+      { q:"عندها عين واحدة، وما بتشوف", a:"الإبرة", n:"العين هي الخرم البيدخل فيهو الخيط." },
+      { q:"بتبكي بلا عيون، وبتطير بلا جناحات", a:"السحابة", n:"دموعها هي المطرة، والدعاش بيبشّر بيها." },
+      { q:"توبها أخضر، وقلبها أحمر، وبذرها أسود", a:"البطيخة", n:"وبذرها بنحمّصو ونعمل منو التسالي." },
+      { q:"عندو ورق وما شجرة، وبيحكي بلا لسان", a:"الكتاب", n:"والكتاب خير جليس." },
+      { q:"بتدور طول اليوم، وبترفع الموية من النيل، وصوتها بيغنّي", a:"الساقية", n:"صوت الساقية من ذكريات الشمال الحلوة." },
+      { q:"بياكل النار وما بيشبع، وفوقو الجبنة بتغلي", a:"الكانون", n:"الكانون بيشتغل بالفحم." },
+      { q:"بطنو مليان موية وما بيعطش، وبيبرّد للماشي", a:"الزير", n:"الزير في باب البيت سبيل للعطشان." },
+      { q:"بيدقّوها وما بتبكي، وبتفرّح الحلّة كلها", a:"الدلوكة", n:"الدلوكة نجمة أغاني البنات." },
+      { q:"قايمة طول عمرها، راسها في السما وكرعينها في الواطة، وبتدّي الحلو", a:"النخلة", n:"والنخلة فخر الشمالية وأرض الدناقلة." },
+      { q:"لو قلت اسمو، اتكسر", a:"السكات", n:"أول ما تتكلم، السكات بيتكسر." },
+      { q:"تشوفو موية من بعيد، ولمّا تجي ما تلقى شي", a:"السراب", n:"بيظهر في الصحرا في الحرّ الشديد." },
+      { q:"عندو كرعين وما بيمشي، والحبال منسوجة في ضهرو", a:"العنقريب", n:"العنقريب سرير الحوش." },
+      { q:"حاجة إنت بتملكها، والناس بيستعملوها أكتر منك", a:"اسمك", n:"الناس بينادوك بيهو طول اليوم." },
+      { q:"بتطلع بالليل وتختفي بالنهار، وبتكبر وتصغر في الشهر", a:"القمرة", n:"والشفّع بيلعبوا شليل في ضو القمرة." },
+      { q:"عندو أسنان من حديد، وبياكل الخشب وما بيبلع", a:"المنشار", n:"النجّار ما بيستغنى عنّو." }
+    ] },
+  tufula: { title:"أيام الطفولة", desc:"ألعاب وحلاوة وحجاوي زمان", ask:"ده شنو؟", mk:"شليل", col:"#b4561f", art:null, items: [] },
+  tabkha: { title:"شنو الطبخة؟", desc:"من المقادير، اعرف الأكلة", ask:"شنو الطبخة؟", mk:"ملاح", col:"#8b3d1a", art:null, items: [] },
+  sahih: { title:"صاح ولا غلط؟", desc:"معلومات عن بلدنا، صاح ولا غلط؟", ask:"صاح ولا غلط؟", mk:"؟", col:"#3d5a80", art:null, tf:true,
+    items: [
+      { q:"في السودان أهرامات أكتر من مصر", a:"صاح", n:"أغلبها في البجراوية قرب شندي." },
+      { q:"النيل الأزرق جاي من بحيرة فكتوريا", a:"غلط", n:"النيل الأزرق جاي من بحيرة تانا في إثيوبيا، والأبيض هو الجاي من البحيرات." },
+      { q:"المقرن هو ملتقى النيل الأبيض والأزرق", a:"صاح", n:"في الخرطوم." },
+      { q:"الكسرة بتتعمل من دقيق القمح", a:"غلط", n:"الكسرة من دقيق العيش، يعني الذرة. القرّاصة هي البتتعمل من القمح." },
+      { q:"بورتسودان على البحر الأحمر", a:"صاح", n:"وهي الميناء الرئيسي للبلد." },
+      { q:"السلّم الخماسي من مميزات الغناء السوداني", a:"صاح", n:"وده البيخلّيهو قريب من موسيقى أفريقيا." },
+      { q:"جبل مرة في كسلا", a:"غلط", n:"جبل مرة في دارفور. كسلا عندها جبال التاكا." },
+      { q:"عاصمة الولاية الشمالية هي دنقلا", a:"صاح", n:"بلد الدناقلة والنخيل." },
+      { q:"الحلومر بيتعمل للعيد الكبير بس", a:"غلط", n:"الحلومر مشروب رمضان، والبيوت بتعوسو قبل الشهر." },
+      { q:"مشروع الجزيرة اشتهر بزراعة القطن", a:"صاح", n:"وعاصمتو ود مدني." },
+      { q:"سواكن ميناء على النيل", a:"غلط", n:"سواكن على البحر الأحمر، وكانت أهم ميناء قبل بورتسودان." },
+      { q:"فطور الضرا هو فطور رمضان في الشارع قدّام البيوت", a:"صاح", n:"وأي ماشي أو مسافر بيعزموهو." },
+      { q:"الطمبور آلة نفخ", a:"غلط", n:"الطمبور آلة وترية. الوازا هي آلات النفخ." },
+      { q:"السماية بتتعمل في اليوم السابع للمولود", a:"صاح", n:"وفيها بيسمّوا المولود." },
+      { q:"عطبرة مشهورة بالسكة حديد", a:"صاح", n:"لقبها مدينة الحديد والنار." },
+      { q:"الدنقلاوية لغة نوبية", a:"صاح", n:"أهلها بسمّوها الأنداندي." },
+      { q:"التبلدي هو شجر الباوباب", a:"صاح", n:"وثمرتو القنقليز." },
+      { q:"أم درمان على الضفة الشرقية للنيل", a:"غلط", n:"أم درمان على الضفة الغربية، قصاد الخرطوم." },
+      { q:"الصمغ العربي من أشهر منتجات كردفان", a:"صاح", n:"والأبيض سوقو الكبير." },
+      { q:"دنقلا العجوز كانت عاصمة مملكة المقرة", a:"صاح", n:"مملكة نوبية مسيحية عاشت قرون طويلة." },
+      { q:"استقلال السودان كان في أول يناير ١٩٥٦", a:"صاح", n:"ورُفع العلم في القصر الجمهوري في الخرطوم." },
+      { q:"أبو القدح هو التمساح", a:"غلط", n:"أبو القدح هو السلحفاة، لأن ضهرو زي القدح." }
+    ] },
+  danagla: { title:"الدناقلة", desc:"اختبر نفسك عن أهلنا الدناقلة", ask:"الدناقلة:", mk:"دنقلا", col:"#1f5f8b", art:null,
+    items: [
+      { q:"معنى كلمة «الدناقلة»", a:"أهل دنقلا", x:["أهل النيل الأزرق","أهل الشرق","أهل الجبال"], n:"نسبة لدنقلا، أرضهم في الولاية الشمالية." },
+      { q:"اللغة النوبية بتاعة الدناقلة اسمها", a:"الدنقلاوية (الأنداندي)", x:["التبداوية","الفوراوية","المساليت"], n:"لغة نوبية، أكتر من بيتكلّمها هسّي الكبار، وفي محاولات لإحيائها عند الشباب." },
+      { q:"دنقلا عاصمة ياتو ولاية؟", a:"الشمالية", x:["نهر النيل","الخرطوم","الجزيرة"], n:"وفيها مكاتب الحكومة الرئيسية للولاية." },
+      { q:"دنقلا العجوز كانت عاصمة مملكة", a:"المقرة", x:["مروي","الفونج","سنار"], n:"مملكة نوبية مسيحية في العصور الوسطى." },
+      { q:"المبنى المشهور في دنقلا العجوز اللي اتحوّل لمسجد سنة ١٣١٧", a:"قاعة العرش", x:["الدفوفة","الهرم الكبير","قلعة سواكن"], n:"من أشهر آثار النوبة، وبقى مسجد لقرون." },
+      { q:"اللغة القريبة من الدنقلاوية في مصر", a:"الكنزية", x:["القبطية","الأمازيغية","السواحيلية"], n:"الكنزية والدنقلاوية لغتين نوبيتين قريبات من بعض." },
+      { q:"المحصول الأشهر في أرض الدناقلة", a:"التمر", x:["القطن","السمسم","الصمغ"], n:"النخيل فخر الشمالية." },
+      { q:"البركاوي والقنديلة أصناف من شنو؟", a:"التمر", x:["القمح","الفول","المانجو"], n:"من أشهر تمور الشمال." },
+      { q:"الإمام محمد أحمد المهدي اتولد في جزيرة", a:"لبب قرب دنقلا", x:["توتي","سواكن","أبا"], n:"اتولد في لبب سنة ١٨٤٤، وأعلن دعوتو بعدين من جزيرة أبا." },
+      { q:"الدناقلة عايشين على النيل بين الشلال التالت و", a:"الدبّة", x:["الخرطوم","كوستي","بورتسودان"], n:"على ضفاف النيل وجزرو." },
+      { q:"الأرض الزراعية الخصبة على ضفة النيل بسمّوها", a:"الجروف", x:["القيزان","البطانة","الوديان"], n:"بيزرعوا فيها بعد ما الموية تنزل." },
+      { q:"الآلة القديمة اللي كانت بترفع موية النيل للزرع", a:"الساقية", x:["الدلوكة","الطمبور","الكانون"], n:"صوت الساقية جزء من ذاكرة الشمال." }
+    ] },
+  khareeta: { title:"وين البلد؟", desc:"لاقي المدينة على خريطة النيل", ask:"وين البلد؟", mk:"خريطة", col:"#24637a", art:"nile", map:true, items: [] },
+  dongolawi: { title:"اتكلّم دنقلاوي", desc:"كلمات دنقلاوية من العيلة", ask:"الكلمة دي معناها شنو؟", mk:"أنداندي", col:"#0f4c6e", art:null, live:true, items: [] }
+};
+
+const RECIPES = [
+  { id:"kisra", name:"الكسرة", clue:"دقيق عيش وموية، بيتخمّر بالليل، وبيتعوس رقيق على الصاج", sub:"خبزنا الأساسي",
+    ing:["دقيق عيش (ذرة)","موية فاترة","شوية من خميرة الكسرة القديمة"],
+    steps:["اخلط الدقيق بالموية لحدّي ما يبقى عجين سايل، وزيد عليهو شوية خميرة.","غطّيهو وخلّيهو يتخمّر بالليل لحدّي الصباح.","سخّن الصاج وامسحو بشوية زيت.","صُب كمية صغيرة وافردها بسرعة بالقرقريبة طبقة رقيقة.","لمّا الأطراف تنشف وتتقشّر، شيلها واطبقها."],
+    tip:"الكسرة أحلى بملاح الويكة أو ملاح الروب." },
+  { id:"aseeda", name:"العصيدة", clue:"دقيق بيتسوط في موية بتغلي لحدّي ما يبقى عجين تقيل، وبيتشكّل في كورة", sub:"أكلة الفطور ورمضان",
+    ing:["دقيق عيش أو دخن أو قمح","موية","ملح"],
+    steps:["غلّي الموية مع شوية ملح.","زيد الدقيق شوية شوية وإنت بتسوط بقوة عشان ما يتكوّر.","استمر في السواطة لحدّي ما يبقى عجين تقيل ناعم.","حطّو في كورة مبلولة ودوّرو عشان ياخد شكلها.","اقلبو في الصحن وصُب حولو الملاح."],
+    tip:"بتتاكل بملاح التقلية أو الروب، وفي رمضان ليها طعم خاص." },
+  { id:"weika", name:"ملاح الويكة", clue:"بامية ناشفة مطحونة، وبصل ولحمة، وبيتفرك بالمفراكة لحدّي ما يبقى لزج", sub:"ملاح الكسرة المشهور",
+    ing:["ويكة (بامية مجففة مطحونة)","بصل مفروم","لحمة أو شرموط (لحم مجفّف)","زيت","صلصة طماطم","ملح وبهارات"],
+    steps:["حمّر البصل في الزيت لحدّي ما يدهب.","زيد اللحمة أو الشرموط وقلّبها شوية.","زيد الصلصة والملح والبهارات وشوية موية وخلّيهو يستوي.","زيد الويكة وإنت بتفرك بالمفراكة لحدّي ما الملاح يبقى ناعم ولزج.","خلّيهو على نار هادية دقايق، وقدّمو مع الكسرة."],
+    tip:"المفراكة هي سرّ النعومة." },
+  { id:"rob", name:"ملاح الروب", clue:"روب حامض ودكوة، وبصل، وبيتاكل مع الكسرة", sub:"حامض وحلو",
+    ing:["روب (لبن رايب)","دكوة (معجون الفول السوداني)","بصل","زيت","ملح وشطة"],
+    steps:["حمّر البصل في شوية زيت.","اخلط الدكوة بشوية موية لحدّي ما تبقى ناعمة.","زيد الدكوة على البصل وقلّب.","زيد الروب على نار هادية وإنت بتقلّب عشان ما يتقطّع.","ملّح وزيد الشطة حسب الذوق."],
+    tip:"ما تخلّي النار عالية بعد الروب." },
+  { id:"gurasa", name:"القُرّاصة", clue:"دقيق قمح وموية، رغيف سميك مدوّر بيستوي في الطاوة، وبيتاكل بالدمعة أو السمن والسكر", sub:"خبز الشمال",
+    ing:["دقيق قمح","موية","ملح","شوية خميرة (اختياري)"],
+    steps:["اعجن الدقيق مع الموية والملح لحدّي ما يبقى عجين طري.","خلّيهو يرتاح شوية.","افردو دوائر سميكة بالإيد.","سوّيهو على صاج أو طاوة سخنة من الجهتين.","قدّمو بالدمعة أو بالسمن والسكر."],
+    tip:"القرّاصة بالتمر والسمن فطور شمالي أصيل." },
+  { id:"halumur", name:"الحلومُر", clue:"عيش مزرّع ومطحون مع بهارات، بيتعوس رقايق وبيتنقع في الموية ويتصفّى", sub:"ريحة رمضان",
+    ing:["دقيق عيش مزرّع (زريعة)","بهارات الحلومر: قرفة، جنزبيل، حبّهان، وغيرها","موية","سكر عند الشراب"],
+    steps:["اخلط الزريعة بالبهارات والموية وخلّيها تتخمّر.","اعوسها رقايق على الصاج وخلّيها تنشف تماماً.","وقت الشراب، انقع الرقايق في الموية ساعات.","صفّيها كويس وزيد السكر وبرّدها."],
+    tip:"البيوت بتعوسو قبل رمضان بأسابيع، والريحة بتملا الحلّة." },
+  { id:"abreh", name:"الآبري الأبيض", clue:"رقايق ذرة بيضاء بتتنقع في موية باردة بالسكر، مشروب رمضان", sub:"مويتو بتبرّد الكبد",
+    ing:["رقايق الآبري الأبيض","موية باردة","سكر"],
+    steps:["انقع الرقايق في الموية الباردة شوية.","زيد السكر وقلّب.","قدّمو بارد مع الفطور."],
+    tip:"بيتشرب في رمضان جنب الحلومر." },
+  { id:"balila", name:"البليلة", clue:"لوبيا أو عدسية أو كبكبي مسلوق، بزيت وملح وكمّون", sub:"ونسة الفطور",
+    ing:["لوبيا عدسية أو كبكبي","موية","زيت","ملح","كمّون"],
+    steps:["انقع الحبوب من الليل.","اسلقها لحدّي ما تستوي وتبقى طرية.","صفّيها وزيد عليها الزيت والملح والكمّون."],
+    tip:"في ناس بيحبّوها بالسكر، وكل بيت عندو طريقتو." },
+  { id:"shai", name:"الشاي باللبن", clue:"شاي ولبن وسكر وحبّهان، بعد الفطور والغدا", sub:"ما في قعدة بلاهو",
+    ing:["شاي","لبن","سكر","حبّهان أو قرنفل أو قرفة"],
+    steps:["غلّي الموية مع الحبّهان أو القرفة.","زيد الشاي وخلّيهو يغلي شوية.","زيد اللبن والسكر وخلّيهو يفور.","صفّيهو في الكبابي."],
+    tip:"الشاي باللبن بعد فطور رمضان عادة سودانية أصيلة." },
+  { id:"ful", name:"الفول بالجبنة", clue:"فول مدمّس بزيت سمسم وجبنة بيضاء وشطة وليمون", sub:"فطور الصباح",
+    ing:["فول مدمّس","زيت سمسم","جبنة بيضاء","بصل وطماطم","ليمون","شطة وملح وكمّون"],
+    steps:["سخّن الفول وافعصو شوية.","زيد الزيت والملح والكمّون.","فتفت عليهو الجبنة وزيد البصل والطماطم.","زيد الليمون والشطة وقدّمو بالرغيف."],
+    tip:"صحن الفول بيتاكل جماعة في الصينية." },
+  { id:"taamiya", name:"الطعمية", clue:"كبكبي منقوع ومطحون مع بصل وتوم وكزبرة، كور بتتقلى في الزيت", sub:"سندوتش الفسحة",
+    ing:["كبكبي منقوع","بصل","توم","كزبرة خضراء","ملح وكمّون","زيت للقلي"],
+    steps:["انقع الكبكبي من الليل.","اطحنو مع البصل والتوم والكزبرة.","زيد الملح والكمّون.","شكّلو كور صغيرة واقليهم في الزيت السخن لحدّي ما يدهبوا."],
+    tip:"الطعمية السودانية من الكبكبي، والمصرية من الفول." },
+  { id:"aswad", name:"سلطة الأسود", clue:"باذنجان مقلي أو مشوي، مخلوط بالدكوة والليمون والتوم", sub:"سلطة المناسبات",
+    ing:["باذنجان (أسود)","دكوة","ليمون","توم","ملح وشطة"],
+    steps:["اقلي أو اشوي الباذنجان لحدّي ما يستوي.","افعصو كويس.","اخلط الدكوة بالليمون والتوم والملح.","اخلطهم مع بعض وزيد الشطة."],
+    tip:"بتتقدّم جنب الشيّة والكسرة." },
+  { id:"shaiya", name:"الشيّة", clue:"قطع لحمة بتتشوى أو تتحمّر بالبصل والملح والفلفل", sub:"أكلة الضيوف",
+    ing:["لحمة ضأن قطع","بصل","ملح وفلفل أسود","شوية زيت أو شحم"],
+    steps:["قطّع اللحمة قطع صغيرة.","حمّرها على نار عالية بالشحم أو الزيت.","زيد البصل والملح والفلفل وقلّب لحدّي ما تستوي."],
+    tip:"بتتاكل بالشطة وسلطة الأسود." },
+  { id:"zalabia", name:"الزلابية", clue:"عجين سايل بالخميرة، بيتقلى كور منفوخة ويتاكل بالسكر", sub:"فطور العيد",
+    ing:["دقيق قمح","خميرة","موية دافية","شوية سكر وملح","زيت للقلي","سكر بودرة للتقديم"],
+    steps:["اخلط الدقيق والخميرة والموية لحدّي ما يبقى عجين طري سايل.","خلّيهو يخمّر لحدّي ما يتضاعف.","خُت كميات صغيرة بالإيد أو المعلقة في الزيت السخن.","قلّبها لحدّي ما تدهب، وقدّمها بالسكر."],
+    tip:"ريحة الزلابية الصباح بتصحّي البيت كلو." }
+];
+RECIPES.forEach(r => DATA.tabkha.items.push({ q: r.clue, a: r.name, n: r.sub + '. ' + r.tip, rid: r.id }));
+
+const CITIES = [
+  { n:"الخرطوم", lon:32.53, lat:15.6, f:"ملتقى النيلين عند المقرن." },
+  { n:"أم درمان", lon:32.3, lat:15.95, f:"العاصمة الوطنية، غرب النيل." },
+  { n:"بورتسودان", lon:37.2, lat:19.6, f:"ميناء السودان على البحر الأحمر." },
+  { n:"سواكن", lon:37.33, lat:19.1, f:"الميناء القديم جنوب بورتسودان." },
+  { n:"عطبرة", lon:33.98, lat:17.7, f:"عند التقاء نهر عطبرة بالنيل." },
+  { n:"شندي", lon:33.43, lat:16.7, f:"قريبة من أهرامات البجراوية." },
+  { n:"كريمة", lon:31.85, lat:18.55, f:"جنب جبل البركل." },
+  { n:"دنقلا", lon:30.48, lat:19.17, f:"عاصمة الشمالية وبلد الدناقلة." },
+  { n:"كرمة", lon:30.4, lat:19.62, f:"شمال دنقلا، فيها الدفوفة." },
+  { n:"وادي حلفا", lon:31.35, lat:21.8, f:"في أقصى الشمال على البحيرة." },
+  { n:"كسلا", lon:36.4, lat:15.45, f:"تحت جبال التاكا في الشرق." },
+  { n:"القضارف", lon:35.38, lat:14.03, f:"سلّة غذاء السودان." },
+  { n:"ود مدني", lon:33.52, lat:14.4, f:"على النيل الأزرق، قلب الجزيرة." },
+  { n:"سنار", lon:33.6, lat:13.55, f:"عاصمة السلطنة الزرقاء زمان." },
+  { n:"الدمازين", lon:34.36, lat:11.79, f:"على النيل الأزرق في الجنوب الشرقي." },
+  { n:"كوستي", lon:32.66, lat:13.17, f:"على النيل الأبيض." },
+  { n:"الأبيض", lon:30.22, lat:13.18, f:"عروس الرمال في كردفان." },
+  { n:"كادقلي", lon:29.72, lat:11.0, f:"في جبال النوبة." },
+  { n:"الفاشر", lon:25.35, lat:13.63, f:"عاصمة شمال دارفور." },
+  { n:"نيالا", lon:24.88, lat:12.05, f:"عاصمة جنوب دارفور." },
+  { n:"الجنينة", lon:22.45, lat:13.45, f:"في أقصى الغرب قرب تشاد." }
+];
+CITIES.forEach(c => DATA.khareeta.items.push({ q: 'وين ' + c.n + '؟', a: c.n, n: c.f }));
+
+const KIDS = [
+  { cat:"ألعابنا", items: [
+    { t:"شليل", d:"لعبة بالليل في القمرة: يرموا عضم أبيض بعيد في الضلام، والكل يجري يفتّش عليهو، وينادوا «شليل وين راح».", q:"لعبة بالليل، بيرموا فيها عضم أبيض في الضلام والكل يفتّش عليهو" },
+    { t:"الدسّوسية", d:"واحد يغمّض ويعدّ، والباقين يدسّوا في الحوش وورا الأبواب.", q:"لعبة الاستغماية، واحد يعدّ والباقين يدسّوا" },
+    { t:"كورة الشراب", d:"كورة معمولة من الشرابات القديمة، وملعبها الشارع، والقون حجرين.", q:"كورة معمولة من الشرابات القديمة" },
+    { t:"البِلّي", d:"كرات زجاج صغيرة، نتنافس بيها في الحفر وكل واحد بيحرس بلّياتو.", q:"كرات زجاج صغيرة بنتنافس بيها في الحفر" },
+    { t:"السيجة", d:"لعبة حصى في مربعات مرسومة في الواطة، بيلعبوها الكبار والصغار في الضل.", q:"لعبة حصى في مربعات مرسومة على الواطة" },
+    { t:"نطّ الحبل", d:"البنات بنطّوا والعدّ بالصوت العالي، والغلطان يمسك الحبل." },
+    { t:"الطيارة الورق", d:"ورق وعيدان وخيط، وكل الحلّة تتابعها لمّا تطير." }
+  ]},
+  { cat:"حجاوي الحبوبة", items: [
+    { t:"حجيتكم ما بجيتكم", d:"البداية المشهورة لأي حجوة، وبعدها الكل يسكت ويسمع.", q:"البداية المشهورة لحجاوي الحبوبة" },
+    { t:"فاطنة السمحة", d:"أشهر حجوة سودانية، سمعناها كلنا قبل النوم.", q:"أشهر حجوة سودانية عن بنت جميلة" },
+    { t:"البعّاتي", d:"المخلوق البيخوّفوا بيهو الشفّع عشان ما يطلعوا بالليل.", q:"المخلوق البيخوّفوا بيهو الشفّع بالليل" },
+    { t:"أمّ بعلّو", d:"الغولة البيقولوا بتجي للشفّع الما بنوموا بدري.", q:"الغولة البتجي للشفّع الما بنوموا بدري" }
+  ]},
+  { cat:"حلاوة زمان", items: [
+    { t:"القنقليز", d:"ثمرة التبلدي، حامضة وناشفة، ونمصّها لحدّي ما اللسان يبيض.", q:"ثمرة التبلدي الحامضة الناشفة" },
+    { t:"العرديب", d:"بيتنقع ويتعمل منو عصير حامض حلو، خصوصاً في رمضان.", q:"ثمرة بيتعمل منها عصير حامض حلو في رمضان" },
+    { t:"الدوم", d:"ثمرة ناشفة نقرّضها بالسنون، وطعمها زي البسكويت.", q:"ثمرة ناشفة نقرّضها بالسنون" },
+    { t:"النبق", d:"ثمر شجرة السدر، نلقطو من الواطة أو نهز الشجرة.", q:"ثمر شجرة السدر" },
+    { t:"التسالي", d:"بذر البطيخ المحمّص، رفيق الونسة والسينما.", q:"بذر البطيخ المحمّص" },
+    { t:"سندوتش الطعمية", d:"في الفسحة، من البوفيه أو من البيت، وأحلى أكل في الدنيا." }
+  ]},
+  { cat:"المدرسة والخلوة", items: [
+    { t:"الخلوة", d:"نحفظ القرآن عند الشيخ، ونكتب على اللوح الخشب، ونغسلو ونكتب من جديد.", q:"المكان البنحفظ فيه القرآن ونكتب على اللوح" },
+    { t:"الطابور الصباحي", d:"النشيد، والتمارين، والمدير بيفتّش الأظافر والشعر." },
+    { t:"الحصة الأخيرة", d:"الجرس يضرب، والكل يجري للبيت قبل الغدا." }
+  ]},
+  { cat:"الحوش والبيت", items: [
+    { t:"النوم في الحوش", d:"نرشّ الحوش بالموية قبل المغرب، ونفرش العناقريب، وننوم نعدّ النجوم." },
+    { t:"قطوعات الكهرباء", d:"الضلام يجمع الكل في الحوش، ونونس ونضحك لحدّي ما النور يرجع." },
+    { t:"الراديو", d:"صوت «هنا أم درمان»، والأغاني، والأخبار البيسمعها أبوي بانتباه." },
+    { t:"الجبنة العصرية", d:"ريحة البن والبخور، وأمي وجاراتها، ونحن بنستنّى نلقط حلاوة." }
+  ]},
+  { cat:"الخريف والعيد", items: [
+    { t:"الدُّعاش", d:"النسمة الباردة وريحة الواطة قبل المطرة، والكل يطلع يشمّها.", q:"النسمة الباردة وريحة الواطة قبل المطرة" },
+    { t:"اللعب في المطرة", d:"الطين، والموية في الشوارع، وصوت الضفادع بالليل." },
+    { t:"ملابس العيد", d:"الهدوم الجديدة جنب المخدة، وما بنقدر ننوم من الفرحة." },
+    { t:"العيدية", d:"نلف على بيوت الأهل والجيران، ونعدّ القروش آخر اليوم." },
+    { t:"خبيز العيد", d:"الكعك والبسكويت، والبيت كلو ريحة سمن وسكر.", q:"الكعك والبسكويت البيتعمل قبل العيد" },
+    { t:"الإجازة في البلد", d:"السفر للحبوبات بالبص أو القطر، والنيل والنخيل وأولاد العم." }
+  ]}
+];
+KIDS.forEach(c => c.items.forEach(it => { if (it.q) DATA.tufula.items.push({ q: it.q, a: it.t, n: it.d }); }));
+
+const NAMES = [
+  { n:"ست البنات", m:"سيّدة البنات، اسم سوداني قديم للبت الغالية." },
+  { n:"ست أبوها", m:"الغالية على أبوها، من الأسامي السودانية الأصيلة." },
+  { n:"ستّنا", m:"سيّدتنا، اسم فيهو تقدير ومحبّة." },
+  { n:"بخيتة", m:"من البخت، يعني المحظوظة." },
+  { n:"مستورة", m:"من الستر، دعاء إنها تعيش مستورة طول عمرها." },
+  { n:"عوض وعوضية", m:"عوض من الله. كتير بيتسمّى بيهو المولود البيجي بعد ما الأسرة فقدت عزيز." },
+  { n:"دفع الله", m:"الله دفع عنو الشر. من الأسامي المركّبة المشهورة عندنا." },
+  { n:"محمدين", m:"صيغة سودانية مشهورة من اسم محمد." },
+  { n:"أبّكر", m:"صيغة سودانية لأبو بكر، مشهورة في الغرب." },
+  { n:"الطيّب", m:"الكويس الطاهر. ومنو الروائي الطيب صالح، صاحب «موسم الهجرة إلى الشمال»." },
+  { n:"الزين", m:"الجميل الحسن." },
+  { n:"النور", m:"الضو، وبيتسمّى بيهو المولود الفرّح أهلو." },
+  { n:"الأمين", m:"الصادق المؤتمن، من صفات النبي ﷺ." },
+  { n:"مدثّر", m:"من أسماء النبي ﷺ، من الآية «يا أيها المدثّر»." },
+  { n:"الفاتح", m:"البيفتح أبواب الخير." },
+  { n:"التاج", m:"العزّ والشرف." },
+  { n:"الصادق", m:"البيقول الحق." },
+  { n:"عثمان", m:"من أسماء الصحابة، الخليفة الراشد التالت." },
+  { n:"آمنة", m:"الأمينة المطمئنة، على اسم أم النبي ﷺ." },
+  { n:"النعمة", m:"الخير والبركة من الله." },
+  { n:"البتول", m:"المنقطعة للعبادة، من ألقاب السيدة فاطمة الزهراء." },
+  { n:"سكينة", m:"الهدوء والطمأنينة." },
+  { n:"حوّاء", m:"أم البشر، اسم منتشر في كل السودان." },
+  { n:"عازّة", m:"العزيزة الغالية. وفي أغنية خليل فرح «عازة في هواك» بقت رمز للسودان." }
+];
+
+const ARTS = [
+  { id:"jebena", title:"الجبنة", sub:"قهوة ولمّة وريحة بخور", col:"#8a1d33",
+    p:["الجبنة إبريق قهوة من الفخار، رقبتو طويلة وبطنو مدوّر. والقعدة حولها من أجمل عادات السودانيين.",
+       "البن بيتحمّص على النار لحدّي ما ريحتو تملا البيت، وبعدين بيتدق في الفندك، ومرّات بيتخلط معاهو جنزبيل. القهوة بتتصب في فناجين صغار على صينية، والبخور شغّال جنبها.",
+       "الجبنة ما مجرد قهوة. هي لمّة الجيران والأهل والضيوف، وفيها بتتقال الأخبار والأمثال والضحك."],
+    fact:"الكانون والفندك والمبخر كلهم من عدّة الجبنة.", game:"bait" },
+  { id:"wedding", title:"العرس السوداني", sub:"حنّة وجرتق وسيرة", col:"#9a640a",
+    p:["العرس السوداني أيام ما يوم واحد. بيبدأ بقولة الخير والخطوبة، وبعدها تجهيزات العروس بالحنّة والدلكة والخُمرة.",
+       "في ليلة الحنّة البنات بيغنّوا بالدلوكة. وفي الجرتق بيلبس العرسان الحرير الأحمر ويتعطّروا بالضريرة، والحبوبات حولهم بالزغاريد والبركة.",
+       "والعريس بيجي في السيرة مع أهلو وأصحابو بالغناء والفرح لحدّي بيت العروس."],
+    fact:"الجرتق من أقدم طقوس العرس، والحرير الأحمر فيهو للبركة والحماية." },
+  { id:"samaya", title:"السماية", sub:"فرحة المولود الجديد", col:"#2e6b3f",
+    p:["السماية احتفال بالمولود الجديد، بيتعمل في اليوم السابع بعد الولادة.",
+       "فيها بيسمّوا المولود ويدبحوا الكرامة، ويجتمع الأهل والجيران على الأكل والفرح.",
+       "والنسوان بيجيبوا الهدايا للأم والمولود، والحبوبات بيدّوا الدعوات والنصيحة."],
+    fact:"الكرامة هي الدبيحة البتتوزّع على الأهل والجيران والمحتاجين." },
+  { id:"ramadan", title:"رمضان في السودان", sub:"حلومر وفطور الضرا", col:"#1f5f8b",
+    p:["قبل رمضان بأسابيع، البيوت بتبدأ في عواسة الحلومر، وريحتو بتبشّر بالشهر.",
+       "وأجمل عادة هي فطور الضرا: الرجال بيطلّعوا صواني الفطور للشارع قدّام البيوت ويفطروا مع بعض، وأي ماشي أو مسافر بيعزموهو.",
+       "سفرة رمضان فيها العصيدة بالملاح، والبليلة، والتمر، والحلومر، والآبري الأبيض، والشاي باللبن بعد الفطور."],
+    fact:"في فطور الضرا ما في زول بيفطر براهو، حتى الغريب.", game:"tabkha" },
+  { id:"azya", title:"الأزياء", sub:"التوب والجلابية والعمّة", col:"#8a1d33",
+    p:["التوب لبس المرأة السودانية: قماش طويل بتلفّو على جسمها وراسها، ألوانو ونقوشو كتيرة وبتختلف بالمناسبة.",
+       "الرجال بيلبسوا الجلابية البيضاء والعمّة على الراس، والشال على الكتف، والمركوب في الرجلين، وهو حذاء من الجلد.",
+       "والتوب الأبيض زمان كان لبس الموظفات والمعلّمات، والملوّن للأفراح والمناسبات."],
+    fact:"المركوب بيتصنع من جلود مختلفة، وفي ناس بيعرفوا الصنعة الأصلية من شكلو." },
+  { id:"tarab", title:"الطرب السوداني", sub:"من الحقيبة لوردي والكابلي", col:"#6a3a86",
+    p:["الغناء السوداني ليهو طعم مختلف بسبب السلم الخماسي، وده البيخلّيهو قريب من موسيقى أفريقيا.",
+       "في العشرينات والتلاتينات ظهرت أغاني الحقيبة مع خليل فرح وسرور وكرومة، وبعدها جاء جيل وردي والكابلي وعثمان حسين وسيد خليفة وإبراهيم عوض.",
+       "ومن الآلات المشهورة: الطمبور في الشمال، والنقارة في كردفان ودارفور، والدلوكة في أغاني البنات، والعود عند فنانين المدن."],
+    fact:"إذاعة أم درمان كانت المكان البتطلع منو الأغنية للبلد كلها.", game:"tarab" },
+  { id:"kush", title:"حضارتنا القديمة", sub:"كرمة ونبتة ومروي", col:"#9a640a",
+    p:["في السودان أهرامات أكتر من مصر، أغلبها في البجراوية قرب شندي، وهي مقابر ملوك وملكات مملكة مروي.",
+       "قبلها كانت مملكة كرمة، ومن آثارها الدفوفة، وبعدها مملكة نبتة جنب جبل البركل في كريمة.",
+       "وملكات كوش كان لقبهم الكنداكة، وكانت عندهم سلطة وحكم."],
+    fact:"أهرامات السودان أصغر من أهرامات الجيزة لكن أكتر عدداً وأحدّ زاوية.", game:"khareeta" },
+  { id:"nile", title:"النيلين", sub:"الأزرق والأبيض والمقرن", col:"#1f5f8b",
+    p:["النيل الأزرق جاي من بحيرة تانا في إثيوبيا، والنيل الأبيض جاي من البحيرات في وسط أفريقيا.",
+       "الاتنين بيلتقوا في الخرطوم عند المقرن، والواقف فوق الكبري بيشوف لونين للموية جنب بعض قبل ما يختلطوا.",
+       "ومن الخرطوم بيمشي النيل شمال، يقابلو نهر عطبرة، ويمرّ بالشمالية وأرض الدناقلة لحدّي بحيرة النوبة."],
+    fact:"النيل الأزرق بيجيب معظم موية النيل في موسم الفيضان.", game:"khareeta" },
+  { id:"bait", title:"البيت السوداني زمان", sub:"حوش وراكوبة وعنقريب", col:"#2e6b3f",
+    p:["البيت السوداني ليهو حوش واسع، وفي الحوش راكوبة للضل، وعناقريب للقعدة والنوم في ليالي الصيف.",
+       "على الباب زير موية بارد للماشي، وفي المطبخ الكانون والصاج للعواسة.",
+       "والحوش كان مكان الونسة والجبنة وأكل الصينية، والكل بياكل من صحن واحد."],
+    fact:"الأكل في صينية واحدة عادة بتقرّب بين الناس، ومنها المثل: إيد على إيد تجدع بعيد.", game:"bait" }
+];
+
+const OCCASIONS = [
+  { id:"ramadan", t:"رمضان", h:[9,1], d:"شهر الصيام، والحلومر، وفطور الضرا في الشوارع." },
+  { id:"fitr", t:"عيد الفطر", h:[10,1], d:"الهدوم الجديدة، والكعك، والعيدية، ولفّة بيوت الأهل." },
+  { id:"adha", t:"عيد الضحية", h:[12,10], d:"الضحية، والشيّة، ولمّة الأسرة الكبيرة في البلد." },
+  { id:"hijri", t:"رأس السنة الهجرية", h:[1,1], d:"بداية سنة هجرية جديدة." },
+  { id:"mawlid", t:"المولد النبوي", h:[3,12], d:"ساحات المولد، والمديح، وحلاوة المولد بالعروسة والحصان." },
+  { id:"istiqlal", t:"عيد الاستقلال", g:[1,1], d:"أول يناير ١٩٥٦، رُفع علم السودان المستقل." }
+];
+const SEASONS = [
+  { t:"الخريف", w:"من يوليو لسبتمبر تقريباً", d:"موسم المطر، والدعاش، والزراعة، والخضرة." },
+  { t:"حصاد التمر في الشمال", w:"من أغسطس لأكتوبر تقريباً", d:"وقت جني النخيل في أرض الدناقلة والشمالية." },
+  { t:"الشتاء", w:"من ديسمبر لفبراير تقريباً", d:"البرد اللطيف، وشاي الصباح، والأعراس الكتيرة." }
+];
+
+const RANKS = [
+  { min:0, t:"ضيف جديد" }, { min:20, t:"من أهل الدار" }, { min:60, t:"صاحب ونسة" },
+  { min:120, t:"سمّيع وحافظ" }, { min:200, t:"حكيم الحلّة" }, { min:350, t:"مرجع العيلة" }, { min:600, t:"كنز البلد" }
+];
+
+const SPECIAL = {
+  tartib: { title:"رتّب المثل", desc:"الكلمات ملخبطة، رتّبها", mk:"رتّب", col:"#5b2a3a" },
+  pairs: { title:"لعبة الأزواج", desc:"افتح الكروت ولاقي كل كلمة بمعناها", mk:"أزواج", col:"#3c6b3a" }
+};
+const GAME_ORDER = ['mathal','tartib','kalimat','pairs','bait','tabkha','alghaz','tufula','mudun','khareeta','tarab','sahih','danagla','dongolawi'];
+const SIMPLE_GAMES = ['mathal','kalimat','bait','tabkha','alghaz','tufula'];
+const QUIZ_FOR_DAILY = ['mathal','kalimat','bait','mudun','tarab','tufula','sahih','danagla','alghaz','tabkha'];
+
+/* ================= utils ================= */
+const $ = (s, r=document) => r.querySelector(s);
+const esc = t => String(t == null ? '' : t).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const AR = n => String(n).replace(/\d/g, d => '٠١٢٣٤٥٦٧٨٩'[d]);
+const shuffle = (a, r=Math.random) => { a = a.slice(); for (let i=a.length-1;i>0;i--){ const j=Math.floor(r()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; };
+const mulberry = s => () => { s |= 0; s = s + 0x6D2B79F5 | 0; let t = Math.imul(s ^ s >>> 15, 1 | s); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; };
+const fmt = d => d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+const today = () => fmt(new Date());
+const dayNum = () => Math.floor((Date.now() - new Date().getTimezoneOffset()*6e4) / 864e5);
+const rid = () => Math.random().toString(36).slice(2, 10);
+const ROUND = 10;
+const gTitle = id => (DATA[id] || SPECIAL[id]).title;
+
+const DEF = { fs:1, theme:'auto', cups:0, best:{}, got:[], fav:[], days:[], daily:"", dailyScore:0, read:[], family:0, perfect:0, dailies:0, lived:[], simple:true, welcomed:false, autoRead:false, tartibPerfect:0, pairsDone:0, mapPerfect:0 };
+let P;
+function load() {
+  let old = {};
+  try { old = JSON.parse(localStorage.getItem('wansa3') || localStorage.getItem('wansa2') || '{}'); } catch(e) {}
+  try { P = Object.assign({}, DEF, old, JSON.parse(localStorage.getItem('wansa4') || '{}')); } catch(e) { P = Object.assign({}, DEF, old); }
+}
+function save() { try { localStorage.setItem('wansa4', JSON.stringify(P)); } catch(e) {} }
+load();
+
+function toast(msg) {
+  const h = $('#toast-host');
+  h.innerHTML = `<div class="toast">${esc(msg)}</div>`;
+  clearTimeout(toast.t); toast.t = setTimeout(() => { h.innerHTML = ''; }, 3500);
+}
+
+const ICON = {
+  cup: '<svg class="cup-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h13v3.5a6.5 6.5 0 0 1-13 0z"/><path d="M17 9.5h1.5a2.5 2.5 0 0 1 0 5H16.5" fill="none" style="stroke:var(--gold)" stroke-width="1.8"/><path d="M2.5 20.5h16" fill="none" style="stroke:var(--gold)" stroke-width="2" stroke-linecap="round"/></svg>',
+  home: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg>',
+  games: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/><path d="M17 13v8M13 17h8"/></svg>',
+  heritage: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3h4M10.5 3v4.5M13.5 3v4.5"/><path d="M10.5 7.5C6 9.5 5 13.5 6 17c.8 2.8 11.2 2.8 12 0 1-3.5 0-7.5-4.5-9.5"/><path d="M17.5 12 21 8.5"/><path d="M8 21h8"/></svg>',
+  family: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.2"/><circle cx="16.5" cy="9" r="2.6"/><path d="M2.5 20c.6-3.6 2.8-5.6 5.5-5.6s4.9 2 5.5 5.6"/><path d="M14 15.2c.8-.5 1.6-.7 2.5-.7 2.3 0 4.1 1.7 4.6 4.8"/></svg>',
+  danagla: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22V10"/><path d="M12 10c-2-3-5-4-8-3M12 10c2-3 5-4 8-3M12 10c-1-3.5-.5-6 2-8M12 10c1-3.5.5-6-2-8M12 10c-3-1-6 0-7.5 3M12 10c3-1 6 0 7.5 3"/><path d="M3 22c3-1.5 6-1.5 9 0s6 1.5 9 0"/></svg>',
+  heart: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.4 4.3 4.3 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z"/></svg>',
+  trash: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></svg>',
+  sun: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>',
+  moon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg>',
+  speaker: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg>',
+  pot: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h16v5a6 6 0 0 1-6 6h-4a6 6 0 0 1-6-6z"/><path d="M2 10h20M9 6c0-1 1-1.5 1-2.5M14 6c0-1 1-1.5 1-2.5"/></svg>'
+};
+ICON.me = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg>';
+const tabStrip = () => '<svg class="tabag" preserveAspectRatio="none" viewBox="0 0 280 12" aria-hidden="true"><rect width="280" height="12" fill="url(#weave)"/></svg>';
+function medal(color) {
+  return `<svg class="md" viewBox="0 0 60 60" aria-hidden="true">
+    <path d="M18 4 L26 22 L34 22 L42 4Z" style="fill:var(--tab1)"/><path d="M26 4 L30 14 L34 4Z" style="fill:var(--gold)"/>
+    <circle cx="30" cy="38" r="18" style="fill:${color}"/><circle cx="30" cy="38" r="13" fill="none" style="stroke:#fff" stroke-width="1.5" opacity=".5"/>
+    <polygon points="30,29 32.6,35 39,35 34,39 36,45.5 30,41.6 24,45.5 26,39 21,35 27.4,35" style="fill:#fff"/></svg>`;
+}
+
+/* ================= read aloud ================= */
+const TTS = { ok: typeof window.speechSynthesis !== 'undefined' && typeof window.SpeechSynthesisUtterance !== 'undefined', voice: null };
+function pickVoice() {
+  if (!TTS.ok) return;
+  try {
+    const vs = speechSynthesis.getVoices();
+    TTS.voice = ['ar-sd','ar-eg','ar-sa','ar'].map(l => vs.find(v => v.lang && v.lang.toLowerCase().replace('_','-').startsWith(l))).find(Boolean) || null;
+  } catch(e) {}
+}
+if (TTS.ok) { pickVoice(); try { speechSynthesis.addEventListener('voiceschanged', pickVoice); } catch(e) {} }
+function speak(text) { return; }
+function speakOld(text) {
+  if (!TTS.ok) { toast('القراية بالصوت ما شغّالة في المتصفح ده.'); return; }
+  try {
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = TTS.voice ? TTS.voice.lang : 'ar-SA';
+    if (TTS.voice) u.voice = TTS.voice;
+    u.rate = 0.88;
+    speechSynthesis.speak(u);
+    if (!TTS.voice) setTimeout(() => { pickVoice(); if (!TTS.voice) toast('لو ما سمعت صوت: تلفونك محتاج صوت عربي من إعدادات القراية بالصوت.'); }, 1200);
+  } catch(e) { toast('ما قدرنا نقرا بالصوت.'); }
+}
+const speakBtn = (id) => `<span id="${id}" hidden></span>`;
+
+/* ================= theme & font ================= */
+function applyTheme() {
+  const r = document.documentElement;
+  r.removeAttribute('data-wtheme');
+  if (P.theme === 'light') r.setAttribute('data-theme','light');
+  else if (P.theme === 'dark') r.setAttribute('data-theme','dark');
+  else if (P.theme === 'nile') { r.setAttribute('data-theme','dark'); r.setAttribute('data-wtheme','nile'); }
+  else r.removeAttribute('data-theme');
+}
+function isDark() { if (P.theme === 'auto') { try { return matchMedia('(prefers-color-scheme: dark)').matches; } catch(e) { return false; } } return P.theme !== 'light'; }
+function setFs(i) { P.fs = i; save(); document.documentElement.classList.remove('fs1','fs2'); if (i) document.documentElement.classList.add('fs'+i); }
+setFs(P.fs); applyTheme();
+
+/* ================= progress ================= */
+const key = (g,i) => g + ':' + i;
+const has = (arr, v) => arr.indexOf(v) !== -1;
+function rankOf(c) { let r = RANKS[0], nx = RANKS[1]; for (let i=0;i<RANKS.length;i++){ if (c >= RANKS[i].min) { r = RANKS[i]; nx = RANKS[i+1] || null; } } return { r, nx }; }
+function gotCount(g) { return DATA[g].items.filter((_,i) => has(P.got, key(g,i))).length; }
+function streak() {
+  const set = new Set(P.days); let n = 0; const d = new Date();
+  if (!set.has(today())) d.setDate(d.getDate()-1);
+  while (set.has(fmt(d))) { n++; d.setDate(d.getDate()-1); }
+  return n;
+}
+const KID_TOTAL = KIDS.reduce((s,c) => s + c.items.length, 0);
+const COLLECT = ['mathal','kalimat','bait','tabkha','alghaz','tufula','mudun','khareeta','tarab','sahih','danagla'];
+const FAM = { status:'loading', db:null, user:null, uid:null, owner:false, members:[], me:null, q:Promise.resolve(), loaded:false };
+const BADGES = [
+  { id:"first", t:"أول فنجان", d:"أول إجابة صاح", c:"#a56f0c", ok:() => P.got.length > 0 },
+  { id:"perfect", t:"علامة كاملة", d:"جولة كاملة بدون غلط", c:"#8a1d33", ok:() => P.perfect > 0 },
+  { id:"daily", t:"تحدي اليوم", d:"خلّص تحدي يوم واحد", c:"#2e6b3f", ok:() => P.dailies > 0 },
+  { id:"streak3", t:"مواظب", d:"العب ٣ أيام ورا بعض", c:"#a56f0c", ok:() => streak() >= 3 },
+  { id:"streak7", t:"أسبوع كامل", d:"العب ٧ أيام ورا بعض", c:"#8a1d33", ok:() => streak() >= 7 },
+  { id:"family", t:"قعدة العيلة", d:"العب مع العيلة في تلفون واحد", c:"#2e6b3f", ok:() => P.family > 0 },
+  { id:"board", t:"قلب العيلة", d:"انضم للوحة العيلة", c:"#1f5f8b", ok:() => !!(FAM.me && FAM.me.name) },
+  { id:"rawi", t:"راوي الحلّة", d:"اكتب في دفتر العيلة", c:"#b4561f", ok:() => !!(FAM.me && ((FAM.me.stories||[]).length || (FAM.me.words||[]).length)) },
+  { id:"mathal", t:"حافظ الأمثال", d:"اجمع كل الأمثال", c:"#a56f0c", ok:() => gotCount('mathal') === DATA.mathal.items.length },
+  { id:"tartib", t:"رتّبتها صاح", d:"جولة «رتّب المثل» بدون غلط", c:"#5b2a3a", ok:() => P.tartibPerfect > 0 },
+  { id:"pairs", t:"ذاكرة حديد", d:"خلّص «لعبة الأزواج»", c:"#3c6b3a", ok:() => P.pairsDone > 0 },
+  { id:"kalimat", t:"لسان سوداني", d:"اجمع كل الكلمات", c:"#8a1d33", ok:() => gotCount('kalimat') === DATA.kalimat.items.length },
+  { id:"bait", t:"أهل البيت", d:"اجمع كل حاجات البيت", c:"#2e6b3f", ok:() => gotCount('bait') === DATA.bait.items.length },
+  { id:"tabkha", t:"طبّاخ ماهر", d:"اعرف كل الطبخات", c:"#8b3d1a", ok:() => gotCount('tabkha') === DATA.tabkha.items.length },
+  { id:"alghaz", t:"حلّال الألغاز", d:"حِل كل الألغاز", c:"#7a4a1f", ok:() => gotCount('alghaz') === DATA.alghaz.items.length },
+  { id:"mudun", t:"جوّال السودان", d:"اجمع كل المدن", c:"#2f6d9a", ok:() => gotCount('mudun') === DATA.mudun.items.length },
+  { id:"map", t:"الخريطة في الراس", d:"جولة خريطة بدون غلط", c:"#24637a", ok:() => P.mapPerfect > 0 },
+  { id:"tarab", t:"سمّيع", d:"اجمع كل أسئلة الطرب", c:"#6a3a86", ok:() => gotCount('tarab') === DATA.tarab.items.length },
+  { id:"tufula", t:"ولد الحلّة", d:"اجمع كل أسئلة الطفولة", c:"#b4561f", ok:() => gotCount('tufula') === DATA.tufula.items.length },
+  { id:"danagla", t:"دنقلاوي أصيل", d:"اجمع كل أسئلة الدناقلة", c:"#1f5f8b", ok:() => gotCount('danagla') === DATA.danagla.items.length },
+  { id:"lived", t:"عشتها كلها", d:"علّم ٢٠ ذكرى من الطفولة", c:"#b4561f", ok:() => P.lived.length >= 20 },
+  { id:"reader", t:"قارئ التراث", d:"اقرأ كل صفحات التراث", c:"#2e6b3f", ok:() => ARTS.every(a => has(P.read, a.id)) },
+  { id:"cups100", t:"مية فنجان", d:"اجمع ١٠٠ فنجان", c:"#a56f0c", ok:() => P.cups >= 100 }
+];
+window.BADGES_ALL = BADGES;
+const earnedIds = () => BADGES.filter(b => b.ok()).map(b => b.id);
+const freshBadges = before => earnedIds().filter(id => !has(before, id)).map(id => BADGES.find(b => b.id === id));
+const badgeHtml = list => list.map(b => `<div class="newb">${medal(b.c)}<div><b>وسام جديد: ${esc(b.t)}</b><br><span class="muted">${esc(b.d)}</span></div></div>`).join('');
+
+/* ================= family board (shared db) ================= */
+async function initFamily() {
+  try {
+    if (!window.claude || typeof window.claude.use !== 'function') { FAM.status = 'off'; refreshFamily(); return; }
+    const [db, user] = await Promise.all([window.claude.use('db'), window.claude.use('user')]);
+    if (!db || !user) { FAM.status = 'off'; refreshFamily(); return; }
+    FAM.db = db; FAM.user = user;
+    FAM.uid = await user.id();
+    FAM.owner = await user.isOwner();
+    if (!FAM.uid) { FAM.status = 'off'; refreshFamily(); return; }
+    const timer = setTimeout(() => { if (!FAM.loaded) { FAM.status = 'slow'; refreshFamily(); } }, 10000);
+    db.collection('family').onSnapshot(snap => {
+      FAM.members = snap.docs.map(d => Object.assign({ id: d.id }, d.data()));
+      FAM.me = FAM.members.find(m => m.id === FAM.uid) || null;
+      if (!snap.metadata.fromCache) { FAM.loaded = true; clearTimeout(timer); }
+      FAM.status = 'ready';
+      rebuildDongolawi();
+      refreshFamily();
+    }, () => { clearTimeout(timer); FAM.status = 'error'; refreshFamily(); });
+  } catch(e) { FAM.status = 'off'; refreshFamily(); }
+}
+function writeMe(mut) {
+  FAM.q = FAM.q.then(async () => {
+    const base = JSON.parse(JSON.stringify(FAM.me || { name:'', cups:0, stories:[], words:[] }));
+    delete base.id;
+    base.stories = base.stories || []; base.words = base.words || [];
+    mut(base);
+    base.rank = rankOf(base.cups || 0).r.t;
+    base.updated = Date.now();
+    await FAM.db.doc('family/' + FAM.uid).set(base);
+  }).catch(e => { toast(writeErr(e)); });
+  return FAM.q;
+}
+function writeErr(e) {
+  const c = e && e.code;
+  if (c === 'quota_exceeded') return 'الدفتر اتملا. امسحوا حاجات قديمة عشان تكتبوا جديد.';
+  if (c === 'resource_exhausted') return 'استنّى شوية وجرّب تاني.';
+  return 'ما قدرنا نحفظ. ممكن ما عندك إذن الكتابة، اطلب من صاحب ونسة يديك إذن المشاركة.';
+}
+let syncT;
+function syncCups() {
+  if (!FAM.me || !FAM.db) return;
+  clearTimeout(syncT);
+  syncT = setTimeout(() => { if (FAM.me && FAM.me.cups !== P.cups) writeMe(b => { b.cups = P.cups; }); }, 1200);
+}
+function rebuildDongolawi() {
+  const items = [];
+  FAM.members.forEach(m => (m.words || []).forEach(w => { if (w && w.w && w.m) items.push({ q: w.w, a: w.m, n: 'من ' + (m.name || 'العيلة') + (w.note ? ' · ' + w.note : '') }); }));
+  const seen = new Set();
+  DATA.dongolawi.items = items.filter(it => { const k = it.q + '|' + it.a; if (seen.has(k)) return false; seen.add(k); return true; });
+}
+function famStories(cat) {
+  const out = [];
+  FAM.members.forEach(m => (m.stories || []).forEach(s => { if (!cat || s.cat === cat) out.push(Object.assign({ by: m.name || 'واحد من العيلة', owner: m.id }, s)); }));
+  return out.sort((a,b) => (b.at||0) - (a.at||0));
+}
+function refreshFamily() {
+  const h = location.hash.slice(1);
+  const okNow = famOk();
+  if (FAM.lastOk !== okNow) {
+    FAM.lastOk = okNow;
+    if (['', 'home', 'games', 'danagla', 'me', 'childhood'].includes(h)) { route(); return; }
+    renderChrome();
+  }
+  if (h === 'family') { fillFamilyBoard(); fillFamilyStories(); if (!document.activeElement || document.activeElement.id !== 'fam-name') fillFamilyJoin(); }
+  if (h === 'danagla') fillDanFamily();
+  const t = $('#tile-dongolawi'); if (t) t.textContent = dongoMeta();
+}
+const dongoMeta = () => DATA.dongolawi.items.length ? `${AR(DATA.dongolawi.items.length)} كلمة من العيلة` : 'العيلة لسه ما كتبت كلمات';
+
+/* ================= questions ================= */
+function makeQ(g, i, r=Math.random) {
+  const G = DATA[g], it = G.items[i];
+  if (G.tf) return { g, i, a: it.a, ch: ['صاح','غلط'] };
+  if (G.map) {
+    const me = CITIES.find(c => c.n === it.a);
+    const far = shuffle(CITIES.filter(c => c.n !== me.n && Math.hypot(c.lon-me.lon, c.lat-me.lat) > 1.6), r);
+    const pick = [];
+    for (const c of far) { if (pick.every(p => Math.hypot(p.lon-c.lon, p.lat-c.lat) > 1.4)) pick.push(c); if (pick.length === 3) break; }
+    return { g, i, a: it.a, ch: shuffle([me.n, ...pick.map(p => p.n)], r) };
+  }
+  const wrong = it.x ? it.x.slice(0,3) : shuffle([...new Set(G.items.map(o => o.a).filter(a => a !== it.a))], r).slice(0,3);
+  return { g, i, a: it.a, ch: shuffle([it.a, ...wrong], r) };
+}
+function pool(gs) { const out = []; gs.forEach(g => DATA[g].items.forEach((_,i) => out.push([g,i]))); return out; }
+
+/* ================= routing ================= */
+let S = { libTab:'mathal', libQ:'', herTab:'pages', namesQ:'', famCat:'hikaya', famFilter:'all' };
+const famOk = () => FAM.status !== 'off' && FAM.status !== 'error';
+const visGames = list => list.filter(id => id !== 'dongolawi' || famOk());
+function tabsList() {
+  if (P.simple) return [['home','الرئيسية'],['games','الألعاب'], famOk() ? ['family','العيلة'] : ['me','إعداداتي']];
+  return [['home','الرئيسية'],['games','الألعاب'],['heritage','التراث'], ...(famOk() ? [['family','العيلة']] : []), ['danagla','الدناقلة']];
+}
+function section(h) {
+  if (!h || h === 'home') return 'home';
+  if (h.startsWith('play-') || h === 'daily' || h === 'qaada' || h === 'library') return 'games';
+  if (h.startsWith('art-') || h.startsWith('recipe-') || ['childhood','kitchen','names','occasions','heritage'].includes(h)) return 'heritage';
+  return h;
+}
+function go(h) { if (location.hash.slice(1) === h) route(); else location.hash = h; }
+
+function renderChrome() {
+  const sec = section(location.hash.slice(1));
+  $('#tabs').innerHTML = tabsList().map(([id,t]) => `<button data-t="${id}" ${sec===id?'aria-current="page"':''}>${ICON[id]}<span>${t}</span></button>`).join('');
+  $('#tabs').querySelectorAll('button').forEach(b => b.addEventListener('click', () => go(b.dataset.t)));
+  const dark = isDark();
+  $('#top-r').innerHTML = `
+    <button class="pill" id="cups-pill" aria-label="فناجينك وإعداداتك">${ICON.cup}<span>${AR(P.cups)}</span></button>
+    <button class="pill" id="theme-pill" aria-label="${dark ? 'الوضع النهاري' : 'الوضع الليلي'}">${dark ? ICON.sun : ICON.moon}</button>
+    <button class="pill" id="fs-pill" aria-label="غيّر حجم الخط"><span style="font-size:${[.95,1.1,1.3][P.fs]}rem">أ</span></button>`;
+  $('#cups-pill').addEventListener('click', () => go('me'));
+  $('#theme-pill').addEventListener('click', () => { P.theme = isDark() ? 'light' : 'dark'; save(); applyTheme(); renderChrome(); if (location.hash.slice(1) === 'me') renderMe(); });
+  $('#fs-pill').addEventListener('click', () => { setFs((P.fs + 1) % 3); renderChrome(); });
+}
+$('#logo').addEventListener('click', () => go('home'));
+
+function route() {
+  const h = location.hash.slice(1);
+  try { if (TTS.ok) speechSynthesis.cancel(); } catch(e) {}
+  renderChrome();
+  if (h.startsWith('play-')) {
+    const g = h.slice(5);
+    if (g === 'tartib') { if (!(S.play && S.play.mode === 'tartib')) startTartib(); return renderTartib(); }
+    if (g === 'pairs') { if (!(S.play && S.play.mode === 'pairs')) startPairs(); return renderPairs(); }
+    if (DATA[g]) {
+      if (DATA[g].live && DATA[g].items.length < 4 && !(S.play && S.play.g === g)) return renderDongoEmpty();
+      if (!(S.play && S.play.mode === 'game' && S.play.g === g)) startGame(g);
+      return renderPlay();
+    }
+  }
+  if (h === 'daily') {
+    if (!(S.play && S.play.mode === 'daily')) { if (P.daily === today()) return renderDailyDone(); startDaily(); }
+    return renderPlay();
+  }
+  if (h === 'qaada') { if (S.play && S.play.mode === 'qaada') return renderPlay(); return renderQaadaSetup(); }
+  S.play = null;
+  if (h.startsWith('art-')) return renderArticle(h.slice(4));
+  if (h.startsWith('recipe-')) return renderRecipe(h.slice(7));
+  if (h === 'childhood') { S.herTab = 'kids'; return renderHeritage(); }
+  if (h === 'kitchen') { S.herTab = 'kitchen'; return renderHeritage(); }
+  if (h === 'names') { S.herTab = 'names'; return renderHeritage(); }
+  if (h === 'occasions') { S.herTab = 'occ'; return renderHeritage(); }
+  if (h === 'heritage') { S.herTab = 'pages'; return renderHeritage(); }
+  if (h === 'games') return renderGames();
+  if (h === 'library') return renderLibrary();
+  if (h === 'danagla') return renderDanagla();
+  if (h === 'family') return renderFamily();
+  if (h === 'me') return renderMe();
+  renderHome();
+}
+addEventListener('hashchange', () => { route(); window.scrollTo(0,0); });
+
+/* ================= occasions ================= */
+let HFMT = null;
+try { HFMT = new Intl.DateTimeFormat('en-u-ca-islamic-umalqura-nu-latn', { month:'numeric', day:'numeric' }); } catch(e) {}
+function hijriMD(d) {
+  if (!HFMT) return null;
+  try { const p = HFMT.formatToParts(d); return [+p.find(x => x.type === 'month').value, +p.find(x => x.type === 'day').value]; } catch(e) { return null; }
+}
+let OCC_CACHE = null;
+function occasions() {
+  if (OCC_CACHE && OCC_CACHE.day === today()) return OCC_CACHE.list;
+  const base = new Date(); base.setHours(12,0,0,0);
+  const list = [];
+  OCCASIONS.forEach(o => {
+    for (let k = 0; k < 400; k++) {
+      const d = new Date(base); d.setDate(base.getDate() + k);
+      let hit = false;
+      if (o.g) hit = d.getMonth()+1 === o.g[0] && d.getDate() === o.g[1];
+      else { const md = hijriMD(d); hit = !!md && md[0] === o.h[0] && md[1] === o.h[1]; }
+      if (hit) { list.push(Object.assign({ date: d, days: k }, o)); break; }
+    }
+  });
+  list.sort((a,b) => a.days - b.days);
+  OCC_CACHE = { day: today(), list };
+  return list;
+}
+const gDate = d => { try { return new Intl.DateTimeFormat('ar-EG', { weekday:'long', day:'numeric', month:'long', year:'numeric' }).format(d); } catch(e) { return fmt(d); } };
+
+/* ================= home ================= */
+function dates() {
+  let g = '', hj = '';
+  try { g = new Intl.DateTimeFormat('ar-EG', { weekday:'long', day:'numeric', month:'long', year:'numeric' }).format(new Date()); } catch(e) {}
+  try { hj = new Intl.DateTimeFormat('ar-SA-u-ca-islamic-umalqura', { day:'numeric', month:'long', year:'numeric' }).format(new Date()); } catch(e) {}
+  return [g, hj].filter(Boolean).join(' · ');
+}
+function renderHome() {
+  const hr = new Date().getHours();
+  const greet = hr < 12 ? 'صباح الخير يا أهلنا' : hr < 17 ? 'نهاركم سعيد يا أهلنا' : 'مساء الخير يا أهلنا';
+  const d = dayNum();
+  const pr = DATA.mathal.items[d % DATA.mathal.items.length];
+  const wd = DATA.kalimat.items[(d * 7) % DATA.kalimat.items.length];
+  const fact = DATA.sahih.items[(d * 3) % DATA.sahih.items.length];
+  const riddle = DATA.alghaz.items[(d * 11) % DATA.alghaz.items.length];
+  const rec = RECIPES[(d * 5) % RECIPES.length];
+  const art = ARTS[d % ARTS.length];
+  const allKids = KIDS.flatMap(c => c.items);
+  const kid = allKids[(d * 5) % allKids.length];
+  const done = P.daily === today();
+  const { r } = rankOf(P.cups);
+  const occ = occasions()[0];
+  const dailyBtn = `<button class="cta ${done?'done':''}" id="daily-cta"><span class="ic">${ICON.sun}</span>
+      <span><b>${done ? 'خلّصت تحدي اليوم' : 'تحدي اليوم'}</b><span>${done ? `جبت ${AR(P.dailyScore)} من ٥. تعال بكرة لتحدي جديد.` : 'خمسة أسئلة من كل الألعاب، وكل إجابة صاح بفنجانين.'}</span></span></button>`;
+  const proverb = `<section class="say-card"><div class="row-h"><span class="tag">مثل اليوم</span>${speakBtn('sp-pr')}</div><div class="say">${esc(pr.q)} ${esc(pr.a)}</div><p>${esc(pr.n)}</p></section>`;
+  const hello = `<section class="hello"><div class="in"><h1>${greet}</h1><span class="dates">${esc(dates())}</span>
+      <span class="muted">لقبك: <b style="color:var(--gold)">${r.t}</b> · ${AR(P.cups)} فنجان · ${AR(streak())} أيام ورا بعض</span></div>${tabStrip()}</section>`;
+
+  const welcome = P.welcomed ? '' : `<section class="card" id="welcome">
+      ${tabStrip()}
+      <h1 style="font-size:1.9rem">أهلاً بيك في ونسة</h1>
+      <p>ألعاب وأمثال وحكاوي من بلدنا. ما في تسجيل ولا كلمة سر، بس اختار الراحة ليك وابدأ.</p>
+      <b>حجم الخط</b>
+      <div class="opt-row" id="w-fs">${['عادي','كبير','أكبر'].map((t,i) => `<button data-fs="${i}" aria-pressed="${P.fs===i}" style="font-size:${[1,1.15,1.3][i]}rem">${t}</button>`).join('')}</div>
+      <button class="btn block" id="welcome-ok">يلا نبدأ</button>
+      <p class="muted small">ممكن تغيّر الحاجات دي بعدين من زر الفنجان فوق.</p>
+    </section>`;
+  const bindWelcome = () => {
+    if (P.welcomed) return;
+    $('#w-fs').querySelectorAll('button').forEach(b => b.addEventListener('click', () => { setFs(+b.dataset.fs); renderChrome(); renderHome(); }));
+    $('#welcome-ok').addEventListener('click', () => { P.welcomed = true; save(); renderHome(); window.scrollTo(0,0); });
+  };
+  if (P.simple) {
+    $('#stage').innerHTML = `${welcome}${hello}${dailyBtn}${proverb}
+      <div class="sec-h"><h2>الألعاب</h2></div>${tilesHtml(SIMPLE_GAMES)}
+      <button class="btn ghost block" id="all-games">كل الألعاب</button>
+      <button class="row-link" id="exit-simple"><span><b>رجّع الشكل الكامل</b><small>التراث والدناقلة والمكتبة</small></span><span class="chev" aria-hidden="true">‹</span></button>`;
+    $('#all-games').addEventListener('click', () => go('games'));
+    $('#exit-simple').addEventListener('click', () => { P.simple = false; save(); route(); });
+  } else {
+    $('#stage').innerHTML = `${welcome}${hello}${dailyBtn}
+      ${occ ? `<button class="row-link" id="occ-link"><span><small>${occ.days === 0 ? 'النهارده' : 'باقي ' + AR(occ.days) + ' يوم على'}</small><b>${esc(occ.t)}</b><small>${esc(gDate(occ.date))}</small></span><span class="chev" aria-hidden="true">‹</span></button>` : ''}
+      ${proverb}
+      <div class="two">
+        <section class="say-card"><span class="tag">كلمة اليوم</span><div class="say" style="font-size:1.55rem">${esc(wd.q)}</div><p><b>${esc(wd.a)}</b></p><p class="muted">${esc(wd.n)}</p></section>
+        <section class="say-card"><span class="tag">ذكرى من الطفولة</span><div class="say" style="font-size:1.55rem">${esc(kid.t)}</div><p class="muted">${esc(kid.d)}</p></section>
+      </div>
+      <section class="say-card"><span class="tag">لغز اليوم</span><p style="font-weight:600;font-size:1.15rem">حجيتك ما بجيتك: ${esc(riddle.q)}؟</p>
+        <div id="riddle-ans"><button class="btn ghost" id="riddle-btn">ورّيني الحل</button></div></section>
+      <section class="say-card"><span class="tag">معلومة اليوم</span><p style="font-weight:600">${esc(fact.q)}؟ <span style="color:${fact.a==='صاح'?'var(--good)':'var(--bad)'}">${fact.a}</span></p><p class="muted">${esc(fact.n)}</p></section>
+      <button class="cta c-nile" id="dan-cta"><span class="ic">${ICON.danagla}</span><span><b>الدناقلة وناوا</b><span>أهلنا، لغتنا، نخيلنا وتاريخنا.</span></span></button>
+      <div class="${famOk() ? 'two' : 'stack'}">
+        ${famOk() ? `<button class="cta c-green" id="fam-cta"><span class="ic">${ICON.family}</span><span><b>لوحة العيلة</b><span>مين جامع فناجين أكتر؟ وحكاوي العيلة.</span></span></button>` : ''}
+        <button class="cta c-clay" id="kitchen-cta"><span class="ic">${ICON.pot}</span><span><b>مطبخ الحبوبة</b><span>طبخة اليوم: ${esc(rec.name)}</span></span></button>
+      </div>
+      <div class="sec-h"><h2>من تراثنا</h2><span>صفحة اليوم</span></div>
+      <button class="row-link" id="feat"><span><b>${esc(art.title)}</b><small>${esc(art.sub)}</small></span><span class="chev" aria-hidden="true">‹</span></button>
+      <button class="row-link" id="kid-link"><span><b>أيام الطفولة</b><small>شليل والدسّوسية والقنقليز</small></span><span class="chev" aria-hidden="true">‹</span></button>
+      <div class="sec-h"><h2>الألعاب</h2><span>${AR(visGames(GAME_ORDER).length)} لعبة</span></div>
+      ${tilesHtml(GAME_ORDER.slice(0,6))}
+      <button class="btn ghost block" id="all-games">كل الألعاب</button>`;
+    const ol = $('#occ-link'); if (ol) ol.addEventListener('click', () => go('occasions'));
+    $('#riddle-btn').addEventListener('click', () => { $('#riddle-ans').innerHTML = `<p><b style="color:var(--accent);font-size:1.3rem">${esc(riddle.a)}</b></p><p class="muted">${esc(riddle.n)}</p>`; });
+    $('#dan-cta').addEventListener('click', () => go('danagla'));
+    const fc = $('#fam-cta'); if (fc) fc.addEventListener('click', () => go('family'));
+    $('#kitchen-cta').addEventListener('click', () => go('recipe-' + rec.id));
+    $('#feat').addEventListener('click', () => go('art-' + art.id));
+    $('#kid-link').addEventListener('click', () => go('childhood'));
+    $('#all-games').addEventListener('click', () => go('games'));
+  }
+  $('#daily-cta').addEventListener('click', () => { if (!done) go('daily'); });
+  $('#sp-pr').addEventListener('click', () => speak(`${pr.q} ${pr.a}. ${pr.n}`));
+  bindWelcome();
+  bindTiles();
+}
+function tileMeta(id) {
+  if (id === 'tartib') return [P.best.tartib != null ? `أحسن نتيجة: ${AR(P.best.tartib)} من ٦` : 'جديدة', ''];
+  if (id === 'pairs') return [P.best.pairs ? `أحسن: ${AR(P.best.pairs)} محاولة` : 'جديدة', ''];
+  if (id === 'dongolawi') return [dongoMeta(), ''];
+  const g = DATA[id];
+  return [`جمعت ${AR(gotCount(id))} من ${AR(g.items.length)}`, P.best[id] != null ? 'أحسن: ' + AR(P.best[id]) + '/' + AR(Math.min(ROUND, g.items.length)) : 'جديدة'];
+}
+function tilesHtml(ids) {
+  return `<div class="tiles">${ids.map(id => { const g = DATA[id] || SPECIAL[id]; const [m1, m2] = tileMeta(id); return `
+    <button class="tile" data-g="${id}">
+      <span class="mark" style="background:${g.col}">${esc(g.mk)}</span>
+      <b>${esc(g.title)}</b><span class="d">${esc(g.desc)}</span>
+      <span class="meta"><span ${id==='dongolawi'?'id="tile-dongolawi"':''}>${m1}</span><span>${m2}</span></span>
+    </button>`; }).join('')}</div>`;
+}
+function bindTiles() { $('#stage').querySelectorAll('.tile').forEach(t => t.addEventListener('click', () => { S.play = null; go('play-' + t.dataset.g); })); }
+
+/* ================= games tab ================= */
+function renderGames() {
+  const done = P.daily === today();
+  $('#stage').innerHTML = `
+    <h1 class="page-h">الألعاب</h1>
+    <p class="muted">كل إجابة صاح بتديك فنجان، والفناجين بترفع لقبك.</p>
+    <button class="cta ${done?'done':''}" id="daily-cta"><span class="ic">${ICON.sun}</span>
+      <span><b>${done ? 'خلّصت تحدي اليوم' : 'تحدي اليوم'}</b><span>${done ? 'تعال بكرة لتحدي جديد.' : 'خمسة أسئلة منوّعة بفنجانين للسؤال.'}</span></span></button>
+    <div class="two">
+      <button class="cta c-green" id="qaada-cta"><span class="ic">${ICON.family}</span><span><b>قعدة العيلة</b><span>من ٢ لـ٤ لاعبين في تلفون واحد.</span></span></button>
+      <button class="cta c-plum" id="lib-cta"><span class="ic">${ICON.heritage}</span><span><b>المكتبة</b><span>كل الإجابات والمحفوظات.</span></span></button>
+    </div>
+    ${tilesHtml(visGames(P.simple ? SIMPLE_GAMES.concat(GAME_ORDER.filter(x => !SIMPLE_GAMES.includes(x))) : GAME_ORDER))}`;
+  $('#daily-cta').addEventListener('click', () => { if (!done) go('daily'); });
+  $('#qaada-cta').addEventListener('click', () => go('qaada'));
+  $('#lib-cta').addEventListener('click', () => go('library'));
+  bindTiles();
+}
+
+/* ================= quiz play ================= */
+function startGame(g) {
+  const idx = shuffle(DATA[g].items.map((_,i)=>i)).slice(0, ROUND);
+  S.play = { mode:'game', g, qs: idx.map(i => makeQ(g,i)), at:0, res:[], picked:null, score:0, cups:0, before: earnedIds() };
+}
+function startDaily() {
+  const r = mulberry(dayNum() * 9973);
+  const qs = shuffle(pool(QUIZ_FOR_DAILY), r).slice(0,5).map(([g,i]) => makeQ(g,i,r));
+  S.play = { mode:'daily', qs, at:0, res:[], picked:null, score:0, cups:0, before: earnedIds() };
+}
+const LETTERS = ['أ','ب','ج','د'];
+function mapSvg(q, done) {
+  const W = 360, H = 300, x = lon => 14 + (lon - 21.5) / 17.5 * (W - 28), y = lat => 14 + (23 - lat) / 14 * (H - 28);
+  const line = pts => pts.map(([lo,la],k) => (k ? 'L' : 'M') + x(lo).toFixed(1) + ' ' + y(la).toFixed(1)).join(' ');
+  const white = [[32.4,9.6],[32.6,11.2],[32.66,13.17],[32.5,14.5],[32.53,15.6]];
+  const blue = [[34.9,10.7],[34.36,11.79],[33.6,13.55],[33.52,14.4],[32.9,15.2],[32.53,15.6]];
+  const main = [[32.53,15.6],[32.7,16.1],[33.43,16.7],[33.98,17.7],[33.6,18.6],[33.3,19.5],[32.5,19.0],[31.85,18.55],[31.0,18.4],[30.48,19.17],[30.4,19.62],[30.55,20.6],[31.0,21.2],[31.35,21.8],[31.6,22.6]];
+  const atbara = [[36.2,14.6],[35.4,16.2],[33.98,17.7]];
+  const coast = [[36.95,22.6],[37.15,21.0],[37.22,19.6],[37.4,18.9],[38.0,18.3],[38.6,17.8]];
+  let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="خريطة النيل في السودان">
+    <path d="${line(coast)}" fill="none" style="stroke:var(--nile-soft)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="${x(35.4)}" y="${y(22.2)}" class="lbl-m" font-size="11" text-anchor="middle">البحر الأحمر ←</text>
+    ${[white, blue, main, atbara].map(p => `<path d="${line(p)}" fill="none" style="stroke:var(--nile)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>`).join('')}
+    <text x="${x(31.4)}" y="${y(10.6)}" class="lbl-m" font-size="10" text-anchor="middle">النيل الأبيض</text>
+    <text x="${x(35.6)}" y="${y(11.0)}" class="lbl-m" font-size="10" text-anchor="middle">النيل الأزرق</text>
+    <g transform="translate(26,30)"><path d="M0 12 L0 -8 M-5 -2 L0 -10 L5 -2" fill="none" style="stroke:var(--ink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text x="0" y="26" class="lbl" font-size="11" text-anchor="middle">شمال</text></g>`;
+  CITIES.forEach(c => { if (!q.ch.includes(c.n)) s += `<circle cx="${x(c.lon).toFixed(1)}" cy="${y(c.lat).toFixed(1)}" r="3" style="fill:var(--muted)" opacity=".45"/>`; });
+  q.ch.forEach((n, k) => {
+    const c = CITIES.find(z => z.n === n); const cx = x(c.lon).toFixed(1), cy = y(c.lat);
+    const fill = done ? (n === q.a ? 'var(--good)' : (n === S.play.picked ? 'var(--bad)' : 'var(--muted)')) : 'var(--accent)';
+    const ink = done ? 'var(--surface)' : 'var(--accent-ink)';
+    s += `<circle cx="${cx}" cy="${cy.toFixed(1)}" r="13" style="fill:${fill};stroke:var(--surface)" stroke-width="2.5"/>
+      <text x="${cx}" y="${(cy + 4.5).toFixed(1)}" font-size="13" text-anchor="middle" style="fill:${ink};font-weight:700;font-family:var(--f-ui)">${LETTERS[k]}</text>`;
+    if (done) s += `<text x="${cx}" y="${(cy - 17).toFixed(1)}" class="lbl" font-size="11.5" text-anchor="middle" style="paint-order:stroke;stroke:var(--surface-2);stroke-width:4px">${esc(n)}</text>`;
+  });
+  return s + '</svg>';
+}
+function questionSpeech(q) {
+  const G = DATA[q.g], it = G.items[q.i];
+  if (G.map) return `${it.q}. اختار النقطة الصاح على الخريطة.`;
+  const lead = q.g === 'mathal' ? `كمّل المثل: ${it.q}` : `${G.ask} ${it.q}`;
+  return `${lead}. الخيارات: ${q.ch.join('، ')}`;
+}
+function renderPlay() {
+  const pl = S.play; if (!pl) return renderHome();
+  if (pl.at >= pl.qs.length) return renderEnd();
+  const q = pl.qs[pl.at], G = DATA[q.g], it = G.items[q.i];
+  if (!it) { S.play = null; return go('games'); }
+  const done = pl.picked !== null, ok = pl.picked === q.a;
+  const title = pl.mode === 'daily' ? 'تحدي اليوم' : pl.mode === 'qaada' ? 'قعدة العيلة' : G.title;
+  let who = '';
+  if (pl.mode === 'qaada') {
+    const p = pl.players[pl.at % pl.players.length];
+    who = `<div class="turn" style="background:${p.c}">الدور على: ${esc(p.name)}</div>
+      <div class="chips">${pl.players.map((x,k) => `<span class="chip ${k===pl.at % pl.players.length?'on':''}">${esc(x.name)}: ${AR(x.score)}</span>`).join('')}</div>`;
+  }
+  let prompt;
+  if (q.g === 'mathal') prompt = `<div class="big">${esc(it.q)} ${done ? `<span class="fill">${esc(it.a)}</span>` : '<span class="blank">؟</span>'}</div>`;
+  else if (G.map) prompt = `<div class="clue">${esc(it.q)}</div><div class="map">${mapSvg(q, done)}</div>`;
+  else if (['kalimat','bait','dongolawi'].includes(q.g)) prompt = `<div class="big">${esc(it.q)}</div>`;
+  else prompt = `<div class="clue">${esc(it.q)}</div>`;
+  const track = pl.qs.map((_,k) => `<span class="${pl.res[k]===true?'ok':pl.res[k]===false?'no':k===pl.at?'now':''}"></span>`).join('');
+  const opts = q.ch.map((c,ci) => {
+    const cls = done ? (c === q.a ? 'right' : c === pl.picked ? 'wrong' : '') : '';
+    const label = G.map ? `النقطة ${LETTERS[ci]}` : c;
+    return `<button class="opt ${cls}" id="o-${pl.mode}-${pl.at}-${ci}" data-ci="${ci}" ${done?'disabled':''}>${esc(label)}</button>`;
+  }).join('');
+  const noteH = q.g === 'kalimat' ? 'مثال' : q.g === 'mathal' ? 'المعنى' : q.g === 'tufula' ? 'من الذاكرة' : q.g === 'dongolawi' ? 'من دفتر العيلة' : 'معلومة';
+  const reward = pl.mode === 'daily' ? 'فنجانين' : 'فنجان';
+  const rightTxt = G.map ? `${q.a} (النقطة ${LETTERS[q.ch.indexOf(q.a)]})` : q.a;
+  $('#stage').innerHTML = `
+    <button class="back" id="quit">‹ ${pl.mode === 'game' ? 'الألعاب' : 'رجوع'}</button>
+    <div class="ghead"><span class="gtitle">${esc(title)}</span><span class="prog">سؤال ${AR(pl.at+1)} من ${AR(pl.qs.length)}${pl.mode!=='qaada' ? ' · صاح ' + AR(pl.score) : ''}</span></div>
+    <div class="track" aria-hidden="true">${track}</div>
+    ${who}
+    <section class="card">
+      <div class="row-h"><div class="ask">${pl.mode !== 'game' ? esc(G.title) + ' · ' : ''}${esc(G.ask)}</div>${speakBtn('sp-q')}</div>
+      ${prompt}
+      <div class="opts ${G.tf ? 'tf' : G.map ? 'letters' : ''}">${opts}</div>
+      ${done ? `<div class="reveal" aria-live="polite">
+        <div class="verdict ${ok?'ok':'no'}">${ok ? (pl.mode==='qaada' ? 'صاح! نقطة ليك' : `صاح! عفيت منك، +${reward}`) : `لا، الصاح: ${esc(rightTxt)}`}</div>
+        <div><h3>${noteH}</h3><p>${esc(it.n)}</p></div>
+        ${q.g === 'tabkha' && it.rid ? `<button class="btn ghost" id="see-recipe">شوف طريقة ${esc(it.a)}</button>` : ''}
+        <button class="btn block" id="next">${pl.at === pl.qs.length-1 ? 'شوف النتيجة' : 'السؤال الجاي'}</button>
+      </div>` : ''}
+    </section>`;
+  $('#quit').addEventListener('click', () => { S.play = null; go(pl.mode === 'game' ? 'games' : 'home'); });
+  $('#sp-q').addEventListener('click', () => speak(done ? `${ok ? 'صاح' : 'الإجابة الصاح: ' + q.a}. ${it.n}` : questionSpeech(q)));
+  $('#stage').querySelectorAll('.opt').forEach(b => b.addEventListener('click', () => pick(+b.dataset.ci)));
+  const sr = $('#see-recipe'); if (sr) sr.addEventListener('click', () => { S.play = null; go('recipe-' + it.rid); });
+  const n = $('#next'); if (n) { n.addEventListener('click', nextQ); n.focus({ preventScroll:true }); }
+  const sk = pl.mode + pl.at + JSON.stringify(q.ch);
+
+}
+function pick(ci) {
+  const pl = S.play; if (pl.picked !== null) return;
+  const q = pl.qs[pl.at], c = q.ch[ci], ok = c === q.a;
+  pl.picked = c; pl.res[pl.at] = ok;
+  if (ok) {
+    pl.score++;
+    if (pl.mode === 'qaada') pl.players[pl.at % pl.players.length].score++;
+    else {
+      const gain = pl.mode === 'daily' ? 2 : 1;
+      pl.cups += gain; P.cups += gain;
+      if (!DATA[q.g].live && !has(P.got, key(q.g,q.i))) P.got.push(key(q.g,q.i));
+    }
+  }
+  if (!has(P.days, today())) P.days.push(today());
+  save(); renderChrome(); renderPlay();
+}
+function nextQ() { S.play.at++; S.play.picked = null; renderPlay(); window.scrollTo({ top:0, behavior:'smooth' }); }
+
+function verdictFor(ratio) {
+  return ratio === 1 ? ['عفيت منك!', 'ما فاتك ولا سؤال. إنت مرجع العيلة.']
+       : ratio >= .7 ? ['سمح شديد', 'فاتتك حاجات بسيطة بس.']
+       : ratio >= .4 ? ['كويس', 'داير شوية مراجعة، والمكتبة فيها كل الإجابات.']
+       : ['ما مشكلة', 'اللعب بيعلّم. جرّب تاني وحتتحسّن.'];
+}
+function endCard({ title, s, n, cups, fresh, again, unit }) {
+  const r = unit ? ['عفيت منك!', 'خلّصت كل الأزواج.'] : verdictFor(s / n);
+  const { r:rk, nx } = rankOf(P.cups);
+  return `<section class="card end">
+      <span class="gtitle">${esc(title)}</span>
+      <div class="num">${unit || (AR(s) + ' من ' + AR(n))}</div>
+      <div class="rank">${r[0]}</div>
+      <p>${r[1]}</p>
+      <span class="earned">${ICON.cup} +${AR(cups)} فنجان</span>
+      <div style="align-self:stretch;display:flex;flex-direction:column;gap:6px">
+        <div class="bar"><i style="width:${nx ? Math.round((P.cups - rk.min) / (nx.min - rk.min) * 100) : 100}%"></i></div>
+        <span class="muted" style="font-size:.95rem">لقبك: ${rk.t}${nx ? ` · فاضل ${AR(nx.min - P.cups)} فنجان لـ«${nx.t}»` : ' · أعلى لقب!'}</span>
+      </div>
+      ${badgeHtml(fresh)}
+      <div class="stack">
+        ${again ? '<button class="btn" id="again">العب تاني</button>' : ''}
+        <button class="btn ghost" id="copy">انسخ النتيجة للواتساب</button>
+        <div class="copied" id="copied" aria-live="polite"></div>
+      </div>
+    </section>`;
+}
+function nextList(items) {
+  return `<div class="sec-h"><h2>بعدها شنو؟</h2></div>
+    <div class="stack">${items.map((x,k) => `<button class="row-link nx" data-k="${k}"><span><b>${esc(x[1])}</b><small>${esc(x[2])}</small></span><span class="chev" aria-hidden="true">‹</span></button>`).join('')}</div>`;
+}
+function bindNext(items, g) {
+  $('#stage').querySelectorAll('.nx').forEach(b => b.addEventListener('click', () => {
+    const x = items[+b.dataset.k];
+    S.play = null;
+    if (x[0] === 'lib') { S.libTab = g; S.libQ = ''; go('library'); }
+    else go(x[0]);
+  }));
+}
+function standardNexts(g) {
+  const nexts = [];
+  if (g && DATA[g] && LIB_TABS.includes(g)) nexts.push(['lib', `راجع «${DATA[g].title}» في المكتبة`, `جمعت ${AR(gotCount(g))} من ${AR(DATA[g].items.length)}`]);
+  if (g && DATA[g] && DATA[g].art) { const a = ARTS.find(x => x.id === DATA[g].art); if (a) nexts.push(['art-' + a.id, `اقرأ: ${a.title}`, a.sub]); }
+  if (g === 'tufula') nexts.push(['childhood', 'افتح دفتر الطفولة', 'علّم الذكريات العشتها']);
+  if (g === 'tabkha') nexts.push(['kitchen', 'مطبخ الحبوبة', 'طريقة عمل كل الطبخات']);
+  if (g === 'danagla' || g === 'dongolawi') nexts.push(['danagla', 'صفحة الدناقلة وناوا', 'اقرأ عن أهلنا']);
+  if (P.daily !== today()) nexts.push(['daily', 'تحدي اليوم', 'لسه ما لعبتو']);
+  if (famOk()) nexts.push(['family', 'لوحة العيلة', 'شوف ترتيبك بين أهلك']);
+  else nexts.push(['qaada', 'قعدة العيلة', 'العبوا مع بعض في تلفون واحد']);
+  return nexts;
+}
+function shareLine(title, s, n) { return `جبت ${AR(s)} من ${AR(n)} في «${title}» في ونسة، ولقبي «${rankOf(P.cups).r.t}». ورّيني شطارتك!`; }
+
+function renderEnd() {
+  const pl = S.play, n = pl.qs.length, s = pl.score;
+  if (pl.mode === 'qaada') { if (!pl.saved) { P.family++; pl.saved = true; save(); } return renderQaadaEnd(); }
+  if (!pl.saved) {
+    if (pl.mode === 'game') {
+      if (P.best[pl.g] == null || s > P.best[pl.g]) P.best[pl.g] = s;
+      if (s === n) P.perfect++;
+      if (pl.g === 'khareeta' && s === n) P.mapPerfect++;
+    }
+    if (pl.mode === 'daily') { P.daily = today(); P.dailyScore = s; P.dailies++; }
+    pl.saved = true; save(); syncCups();
+  }
+  const title = pl.mode === 'daily' ? 'تحدي اليوم' : DATA[pl.g].title;
+  const nexts = standardNexts(pl.mode === 'game' ? pl.g : null);
+  $('#stage').innerHTML = endCard({ title, s, n, cups: pl.cups, fresh: freshBadges(pl.before), again: pl.mode === 'game' }) + nextList(nexts);
+  const ag = $('#again'); if (ag) ag.addEventListener('click', () => { startGame(pl.g); renderPlay(); window.scrollTo(0,0); });
+  $('#copy').addEventListener('click', () => copyText(shareLine(title, s, n)));
+  bindNext(nexts, pl.g);
+}
+function copyText(txt) {
+  const out = $('#copied');
+  const fb = () => { out.textContent = txt; const rg = document.createRange(); rg.selectNodeContents(out); const sel = getSelection(); sel.removeAllRanges(); sel.addRange(rg); };
+  try { navigator.clipboard.writeText(txt).then(() => { out.textContent = 'اتنسخت. ألصقها في الواتساب.'; }, fb); } catch(e) { fb(); }
+}
+function renderDailyDone() {
+  $('#stage').innerHTML = `<section class="card end"><span class="gtitle">تحدي اليوم</span>
+    <div class="num">${AR(P.dailyScore)} من ٥</div><p>خلّصت تحدي النهارده. التحدي الجاي بيكون جاهز بكرة إن شاء الله.</p>
+    <div class="stack"><button class="btn" id="g">العب لعبة تانية</button></div></section>`;
+  $('#g').addEventListener('click', () => go('games'));
+}
+function renderDongoEmpty() {
+  $('#stage').innerHTML = `<button class="back" id="quit">‹ الألعاب</button>
+    <section class="card">
+      <span class="mark" style="background:#0f4c6e">أنداندي</span>
+      <h1 style="font-size:1.8rem">اتكلّم دنقلاوي</h1>
+      <p>اللعبة دي بتتبني من كلمات العيلة. أي زول في العيلة يكتب كلمة دنقلاوية ومعناها في لوحة العيلة، والكلمات بتبقى أسئلة للكل.</p>
+      <p class="muted">محتاجين ٤ كلمات على الأقل عشان اللعبة تبدأ. هسّي في ${AR(DATA.dongolawi.items.length)}.</p>
+      <button class="btn block" id="add-w">أضف كلمة دنقلاوية</button>
+    </section>`;
+  $('#quit').addEventListener('click', () => go('games'));
+  $('#add-w').addEventListener('click', () => { S.famCat = 'word'; go('family'); });
+}
+
+/* ================= رتّب المثل ================= */
+function startTartib() {
+  const cand = DATA.mathal.items.map((it,i) => ({ i, words: (it.q + ' ' + it.a).split(/\s+/).filter(Boolean) })).filter(x => x.words.length >= 3);
+  const qs = shuffle(cand).slice(0, 6).map(x => {
+    let order = shuffle(x.words.map((_,k) => k));
+    if (order.every((v,k) => v === k)) order = order.slice().reverse();
+    return { i: x.i, words: x.words, order, placed: [] };
+  });
+  S.play = { mode:'tartib', qs, at:0, res:[], score:0, cups:0, checked:false, before: earnedIds() };
+}
+function renderTartib() {
+  const pl = S.play;
+  if (pl.at >= pl.qs.length) return renderTartibEnd();
+  const q = pl.qs[pl.at], it = DATA.mathal.items[q.i];
+  const chk = pl.checked, ok = pl.res[pl.at] === true;
+  const all = q.placed.length === q.words.length;
+  const track = pl.qs.map((_,k) => `<span class="${pl.res[k]===true?'ok':pl.res[k]===false?'no':k===pl.at?'now':''}"></span>`).join('');
+  $('#stage').innerHTML = `
+    <button class="back" id="quit">‹ الألعاب</button>
+    <div class="ghead"><span class="gtitle">رتّب المثل</span><span class="prog">مثل ${AR(pl.at+1)} من ${AR(pl.qs.length)} · صاح ${AR(pl.score)}</span></div>
+    <div class="track" aria-hidden="true">${track}</div>
+    <section class="card">
+      <div class="ask">اضغط الكلمات بالترتيب الصاح. ولو غلطت، اضغط الكلمة فوق عشان ترجعها.</div>
+      <div class="slots ${chk ? (ok ? 'ok' : 'no') : ''}" aria-label="المثل بالترتيب">
+        ${q.placed.length ? q.placed.map((w,k) => `<button class="word placed" data-p="${k}" ${chk?'disabled':''}>${esc(q.words[w])}</button>`).join('') : '<span class="hint">الكلمات بتظهر هنا</span>'}
+      </div>
+      <div class="wpool">${q.order.map(w => q.placed.includes(w) ? '' : `<button class="word" data-w="${w}" ${chk?'disabled':''}>${esc(q.words[w])}</button>`).join('')}</div>
+      ${!chk ? `<button class="btn block" id="check" ${all ? '' : 'disabled'}>اتأكد</button>` : `
+      <div class="reveal" aria-live="polite">
+        <div class="verdict ${ok?'ok':'no'}">${ok ? 'صاح! عفيت منك، +فنجان' : 'قريب! المثل الصاح:'}</div>
+        ${ok ? '' : `<div class="big" style="font-size:1.8rem">${esc(it.q)} <span class="fill">${esc(it.a)}</span></div>`}
+        <div><h3>المعنى</h3><p>${esc(it.n)}</p></div>
+        ${speakBtn('sp-t')}
+        <button class="btn block" id="next">${pl.at === pl.qs.length-1 ? 'شوف النتيجة' : 'المثل الجاي'}</button>
+      </div>`}
+    </section>`;
+  $('#quit').addEventListener('click', () => { S.play = null; go('games'); });
+  $('#stage').querySelectorAll('.wpool .word').forEach(b => b.addEventListener('click', () => { q.placed.push(+b.dataset.w); renderTartib(); }));
+  $('#stage').querySelectorAll('.slots .word').forEach(b => b.addEventListener('click', () => { q.placed.splice(+b.dataset.p, 1); renderTartib(); }));
+  const c = $('#check'); if (c) c.addEventListener('click', () => {
+    const good = q.placed.map(w => q.words[w]).join(' ') === q.words.join(' ');
+    pl.checked = true; pl.res[pl.at] = good;
+    if (good) { pl.score++; pl.cups++; P.cups++; if (!has(P.got, key('mathal', q.i))) P.got.push(key('mathal', q.i)); }
+    if (!has(P.days, today())) P.days.push(today());
+    save(); renderChrome(); renderTartib();
+  });
+  const sp = $('#sp-t'); if (sp) sp.addEventListener('click', () => speak(`${it.q} ${it.a}. ${it.n}`));
+  const n = $('#next'); if (n) { n.addEventListener('click', () => { pl.at++; pl.checked = false; renderTartib(); window.scrollTo({ top:0, behavior:'smooth' }); }); n.focus({ preventScroll:true }); }
+}
+function renderTartibEnd() {
+  const pl = S.play, n = pl.qs.length, s = pl.score;
+  if (!pl.saved) { if (P.best.tartib == null || s > P.best.tartib) P.best.tartib = s; if (s === n) P.tartibPerfect++; pl.saved = true; save(); syncCups(); }
+  const nexts = [['play-mathal', 'العب «أكمل المثل»', 'نفس الأمثال بطريقة تانية'], ...standardNexts(null)];
+  $('#stage').innerHTML = endCard({ title:'رتّب المثل', s, n, cups: pl.cups, fresh: freshBadges(pl.before), again: true }) + nextList(nexts);
+  $('#again').addEventListener('click', () => { startTartib(); renderTartib(); window.scrollTo(0,0); });
+  $('#copy').addEventListener('click', () => copyText(shareLine('رتّب المثل', s, n)));
+  bindNext(nexts);
+}
+
+/* ================= لعبة الأزواج ================= */
+function startPairs() {
+  const picks = shuffle(DATA.kalimat.items.map((_,i) => i)).slice(0, 6);
+  const cards = shuffle(picks.flatMap(i => [{ p:i, t:DATA.kalimat.items[i].q, w:true }, { p:i, t:DATA.kalimat.items[i].a, w:false }]));
+  S.play = { mode:'pairs', cards, open:[], matched:[], moves:0, lock:false, before: earnedIds() };
+}
+function renderPairs() {
+  const pl = S.play;
+  if (pl.matched.length === pl.cards.length) return renderPairsEnd();
+  $('#stage').innerHTML = `
+    <button class="back" id="quit">‹ الألعاب</button>
+    <div class="ghead"><span class="gtitle">لعبة الأزواج</span><span class="prog">محاولات: ${AR(pl.moves)} · لقيت ${AR(pl.matched.length/2)} من ٦</span></div>
+    <section class="card">
+      <div class="ask">افتح كرتين. لو الكلمة لاقت معناها بيفضلوا مفتوحين.</div>
+      <div class="pgrid">${pl.cards.map((c,k) => {
+        const m = pl.matched.includes(k), o = pl.open.includes(k);
+        const cls = m ? 'done' : o ? 'open' : 'back';
+        return `<button class="pcard ${cls} ${(m||o) && c.w ? 'word-c' : ''}" data-k="${k}" ${m?'disabled':''} aria-label="${m||o ? esc(c.t) : 'كرت مقفول'}">${m||o ? esc(c.t) : ''}</button>`;
+      }).join('')}</div>
+    </section>`;
+  $('#quit').addEventListener('click', () => { S.play = null; go('games'); });
+  $('#stage').querySelectorAll('.pcard').forEach(b => b.addEventListener('click', () => flip(+b.dataset.k)));
+}
+function flip(k) {
+  const pl = S.play;
+  if (pl.lock || pl.matched.includes(k) || pl.open.includes(k)) return;
+  pl.open.push(k);
+  if (pl.open.length === 2) {
+    pl.moves++;
+    const [a, b] = pl.open;
+    if (pl.cards[a].p === pl.cards[b].p) { pl.matched.push(a, b); pl.open = []; renderPairs(); }
+    else { pl.lock = true; renderPairs(); setTimeout(() => { pl.open = []; pl.lock = false; if (S.play === pl) renderPairs(); }, 1100); }
+  } else renderPairs();
+}
+function renderPairsEnd() {
+  const pl = S.play;
+  if (!pl.saved) {
+    pl.cups = pl.moves <= 9 ? 5 : 3; P.cups += pl.cups; P.pairsDone++;
+    if (!P.best.pairs || pl.moves < P.best.pairs) P.best.pairs = pl.moves;
+    if (!has(P.days, today())) P.days.push(today());
+    pl.saved = true; save(); syncCups(); renderChrome();
+  }
+  const nexts = [['play-kalimat', 'العب «كلمات سودانية»', 'اختبر الكلمات بالأسئلة'], ...standardNexts(null)];
+  $('#stage').innerHTML = endCard({ title:'لعبة الأزواج', s:0, n:0, cups: pl.cups, fresh: freshBadges(pl.before), again: true, unit: AR(pl.moves) + ' محاولة' }) + nextList(nexts);
+  $('#again').addEventListener('click', () => { startPairs(); renderPairs(); window.scrollTo(0,0); });
+  $('#copy').addEventListener('click', () => copyText(`خلّصت «لعبة الأزواج» في ونسة في ${AR(pl.moves)} محاولة. تقدر تغلبني؟`));
+  bindNext(nexts);
+}
+
+/* ================= قعدة العيلة (one phone) ================= */
+const PCOL = ['#8a1d33', '#2e6b3f', '#1f5f8b', '#8f4f25'];
+function renderQaadaSetup() {
+  const saved = (S.famNames || ['أبوي', 'أمي', '', '']);
+  const opts = QUIZ_FOR_DAILY.map(id => `<option value="${id}">${esc(DATA[id].title)}</option>`).join('');
+  $('#stage').innerHTML = `
+    <button class="back" id="quit">‹ الألعاب</button>
+    <section class="card">
+      ${tabStrip()}
+      <h1 style="font-size:1.8rem">قعدة العيلة</h1>
+      <p class="muted">اكتبوا أساميكم، والتلفون يلف عليكم. كل واحد بجاوب في دورو، والأكتر صاح هو الفايز.</p>
+      <div class="names">${[0,1,2,3].map(i => `<div class="field"><label for="qa-n${i}">اللاعب ${AR(i+1)}${i>1?' (اختياري)':''}</label><input id="qa-n${i}" maxlength="16" value="${esc(saved[i]||'')}" placeholder="الاسم"></div>`).join('')}</div>
+      <div class="field"><label for="qa-cat">اللعبة</label><select id="qa-cat"><option value="all">منوّعة من كل الألعاب</option>${opts}</select></div>
+      <div class="field"><label for="qa-cnt">أسئلة لكل لاعب</label><select id="qa-cnt"><option value="3">٣ أسئلة</option><option value="5" selected>٥ أسئلة</option><option value="7">٧ أسئلة</option></select></div>
+      <p class="muted" id="qa-err" aria-live="polite"></p>
+      <button class="btn block" id="qa-go">يلا نبدأ</button>
+    </section>`;
+  $('#quit').addEventListener('click', () => go('games'));
+  $('#qa-go').addEventListener('click', () => {
+    const names = [0,1,2,3].map(i => $('#qa-n'+i).value.trim());
+    S.famNames = names;
+    const players = names.filter(Boolean).map((name,k) => ({ name, score:0, c: PCOL[k] }));
+    if (players.length < 2) { $('#qa-err').textContent = 'اكتبوا اسمين على الأقل.'; return; }
+    const cat = $('#qa-cat').value, cnt = +$('#qa-cnt').value;
+    const pl = pool(cat === 'all' ? QUIZ_FOR_DAILY : [cat]);
+    const n = Math.min(players.length * cnt, pl.length - (pl.length % players.length));
+    S.play = { mode:'qaada', players, qs: shuffle(pl).slice(0, n).map(([g,i]) => makeQ(g,i)), at:0, res:[], picked:null, score:0, cups:0 };
+    renderPlay(); window.scrollTo(0,0);
+  });
+}
+function renderQaadaEnd() {
+  const pl = S.play;
+  const ranked = pl.players.slice().sort((a,b) => b.score - a.score);
+  const top = ranked[0].score, winners = ranked.filter(p => p.score === top);
+  const per = pl.qs.length / pl.players.length;
+  $('#stage').innerHTML = `
+    <section class="card end">
+      ${tabStrip()}
+      <span class="gtitle">قعدة العيلة</span>
+      <div class="rank">${winners.length > 1 ? 'تعادل! ' + winners.map(w => esc(w.name)).join(' و') : 'الفايز: ' + esc(winners[0].name)}</div>
+      <p class="muted">${winners.length > 1 ? 'الجبنة على الكل.' : 'الجبنة الجاية على الخسران!'}</p>
+      <div class="stack">${ranked.map((p,k) => `<div class="newb" style="justify-content:space-between"><b>${AR(k+1)}. ${esc(p.name)}</b><span style="font-weight:700;font-variant-numeric:tabular-nums">${AR(p.score)} من ${AR(per)}</span></div>`).join('')}</div>
+      <div class="stack">
+        <button class="btn" id="again">جولة تانية</button>
+        <button class="btn ghost" id="copy">انسخ النتيجة للواتساب</button>
+        <div class="copied" id="copied" aria-live="polite"></div>
+      </div>
+    </section>`;
+  $('#again').addEventListener('click', () => { S.play = null; renderQaadaSetup(); });
+  $('#copy').addEventListener('click', () => copyText('نتيجة قعدة العيلة في ونسة: ' + ranked.map(p => `${p.name} ${AR(p.score)}`).join('، ')));
+}
+
+/* ================= library ================= */
+const LIB_TABS = ['mathal','kalimat','bait','alghaz','tufula','mudun','tarab','sahih','danagla'];
+function renderLibrary() {
+  const tabs = [...LIB_TABS.map(id => [id, DATA[id].title]), ['fav', 'محفوظاتي']];
+  if (!LIB_TABS.includes(S.libTab) && S.libTab !== 'fav') S.libTab = 'mathal';
+  $('#stage').innerHTML = `
+    <button class="back" id="quit">‹ الألعاب</button>
+    <h1 class="page-h">المكتبة</h1>
+    <p class="muted">كل الأمثال والكلمات والمعلومات، اقرأها في أي وقت. «جاوبتها صاح» يعني الحاجة دخلت صندوقك.</p>
+    <div class="seg" role="group" aria-label="أقسام المكتبة">${tabs.map(([id,t]) => `<button data-l="${id}" aria-pressed="${S.libTab===id}">${esc(t)}</button>`).join('')}</div>
+    <input class="search" id="lib-q" type="search" placeholder="فتّش بكلمة…" value="${esc(S.libQ)}" aria-label="فتّش في المكتبة">
+    <div class="count" id="lib-count"></div>
+    <div class="entries" id="lib-list"></div>`;
+  $('#quit').addEventListener('click', () => go('games'));
+  $('#stage').querySelectorAll('.seg button').forEach(b => b.addEventListener('click', () => { S.libTab = b.dataset.l; renderLibrary(); }));
+  $('#lib-q').addEventListener('input', e => { S.libQ = e.target.value; renderLibList(); });
+  renderLibList();
+}
+function entryHtml(g, i) {
+  const it = DATA[g].items[i], k = key(g,i), fav = has(P.fav, k), got = has(P.got, k);
+  let t, m, n = it.n;
+  if (g === 'mathal') { t = it.q + ' ' + it.a; m = it.n; n = ''; }
+  else if (g === 'sahih') { t = it.q; m = 'الإجابة: ' + it.a; }
+  else if (g === 'alghaz') { t = it.q; m = 'الحل: ' + it.a; }
+  else if (g === 'kalimat' || g === 'bait') { t = it.q; m = it.a; }
+  else { t = it.a; m = it.q; }
+  return `<div class="entry"><div class="t">${esc(t)}</div>
+    <button class="icon-btn heart" data-k="${k}" aria-pressed="${fav}" aria-label="${fav?'شيل من المحفوظات':'احفظ'}">${ICON.heart}</button>
+    <div class="m">${esc(m)}</div>${n ? `<div class="n">${esc(n)}</div>` : ''}
+    ${got ? '<div class="got">جاوبتها صاح ✓</div>' : ''}</div>`;
+}
+function renderLibList() {
+  const q = S.libQ.trim();
+  let list;
+  if (S.libTab === 'fav') list = P.fav.map(k => k.split(':')).filter(([g,i]) => DATA[g] && !DATA[g].live && DATA[g].items[+i]).map(([g,i]) => [g, +i]);
+  else list = DATA[S.libTab].items.map((_,i) => [S.libTab, i]);
+  if (q) list = list.filter(([g,i]) => { const it = DATA[g].items[i]; return [it.q, it.a, it.n].join(' ').includes(q); });
+  $('#lib-count').textContent = list.length ? `${AR(list.length)} حاجة` : '';
+  $('#lib-list').innerHTML = list.length ? list.map(([g,i]) => entryHtml(g,i)).join('')
+    : `<div class="empty">${S.libTab === 'fav' && !q ? 'لسه ما حفظت حاجة. اضغط القلب جنب أي مثل أو كلمة عشان تلقاها هنا.' : 'ما لقينا حاجة بالكلمة دي.'}</div>`;
+  $('#lib-list').querySelectorAll('.heart').forEach(b => b.addEventListener('click', () => {
+    const k = b.dataset.k;
+    if (has(P.fav, k)) P.fav = P.fav.filter(x => x !== k); else P.fav.push(k);
+    save(); renderLibList();
+  }));
+}
+
+/* ================= heritage ================= */
+const HER_TABS = [['pages','صفحات التراث'],['kids','أيام الطفولة'],['kitchen','مطبخ الحبوبة'],['occ','مناسباتنا'],['names','أسامينا']];
+const HER_ROUTE = { pages:'heritage', kids:'childhood', kitchen:'kitchen', occ:'occasions', names:'names' };
+function renderHeritage() {
+  const tab = S.herTab in HER_ROUTE ? S.herTab : 'pages';
+  $('#stage').innerHTML = `
+    <h1 class="page-h">التراث</h1>
+    <div class="seg" role="group" aria-label="أقسام التراث">${HER_TABS.map(([id,t]) => `<button data-h="${id}" aria-pressed="${tab===id}">${t}</button>`).join('')}</div>
+    <div id="her-body" class="stack" style="gap:1rem"></div>`;
+  $('#stage').querySelectorAll('.seg button').forEach(b => b.addEventListener('click', () => { S.herTab = b.dataset.h; go(HER_ROUTE[b.dataset.h]); }));
+  ({ pages: renderPages, kids: renderKids, kitchen: renderKitchen, occ: renderOcc, names: renderNames })[tab]();
+}
+function renderPages() {
+  $('#her-body').innerHTML = `
+    <p class="muted">صفحات قصيرة عن عاداتنا وحياتنا. اقرأها واحكيها للصغار.</p>
+    <div class="arts">${ARTS.map(a => `<button class="art-c" data-a="${a.id}"><span class="stripe" style="background:${a.col}"></span>
+      <span class="tx"><b>${esc(a.title)}</b><span>${esc(a.sub)}</span>${has(P.read, a.id) ? '<span class="rd">قريتها ✓</span>' : ''}</span></button>`).join('')}</div>`;
+  $('#her-body').querySelectorAll('.art-c').forEach(b => b.addEventListener('click', () => go('art-' + b.dataset.a)));
+}
+function renderKids() {
+  const n = P.lived.length;
+  $('#her-body').innerHTML = `
+      <section class="card" style="background:#b4561f;color:#fff;border:0">
+        <h2 style="font-size:1.7rem">أيام الطفولة</h2>
+        <p>حاجات عشناها كلنا، من الخرطوم لدنقلا ومن كسلا للفاشر. علّم «عشتها» على أي ذكرى مرّت عليك.</p>
+        <div class="bar" style="background:rgba(255,255,255,.25)"><i style="width:${Math.round(n/KID_TOTAL*100)}%;background:#fff"></i></div>
+        <span style="font-weight:700">عشت ${AR(n)} من ${AR(KID_TOTAL)}</span>
+        <button class="btn" id="kid-play" style="background:#fff;color:#7a3511">العب «أيام الطفولة»</button>
+      </section>
+      ${KIDS.map((c,ci) => `<section class="kid-cat"><div class="sec-h"><h2>${esc(c.cat)}</h2></div>
+        ${c.items.map((it,ii) => { const k = ci + ':' + ii, on = has(P.lived, k); return `<div class="kid"><b>${esc(it.t)}</b>
+          <button class="lived" data-k="${k}" aria-pressed="${on}">${on ? 'عشتها ✓' : 'عشتها؟'}</button><p>${esc(it.d)}</p></div>`; }).join('')}
+      </section>`).join('')}
+      ${famOk() ? '<button class="row-link" id="kid-share"><span><b>عندك ذكرى ما لقيتها هنا؟</b><small>اكتبها في دفتر العيلة عشان الكل يقراها</small></span><span class="chev" aria-hidden="true">‹</span></button>' : ''}`;
+  $('#kid-play').addEventListener('click', () => { S.play = null; go('play-tufula'); });
+  const ks = $('#kid-share'); if (ks) ks.addEventListener('click', () => { S.famCat = 'hikaya'; go('family'); });
+  $('#her-body').querySelectorAll('.lived').forEach(b => b.addEventListener('click', () => {
+    const k = b.dataset.k;
+    if (has(P.lived, k)) P.lived = P.lived.filter(x => x !== k); else P.lived.push(k);
+    save();
+    const y = scrollY; renderKids(); scrollTo(0, y);
+  }));
+}
+function renderKitchen() {
+  $('#her-body').innerHTML = `
+    <section class="card" style="background:#8b3d1a;color:#fff;border:0">
+      <h2 style="font-size:1.7rem">مطبخ الحبوبة</h2>
+      <p>طبخاتنا بالطريقة البسيطة. المقادير تقريبية، وكل بيت عندو سرّو.</p>
+      <button class="btn" id="k-play" style="background:#fff;color:#5a2410">العب «شنو الطبخة؟»</button>
+    </section>
+    <div class="arts">${RECIPES.map(r => `<button class="art-c" data-r="${r.id}"><span class="stripe" style="background:#8b3d1a"></span>
+      <span class="tx"><b>${esc(r.name)}</b><span>${esc(r.sub)}</span></span></button>`).join('')}</div>`;
+  $('#k-play').addEventListener('click', () => { S.play = null; go('play-tabkha'); });
+  $('#her-body').querySelectorAll('.art-c').forEach(b => b.addEventListener('click', () => go('recipe-' + b.dataset.r)));
+}
+function renderRecipe(id) {
+  const r = RECIPES.find(x => x.id === id); if (!r) { S.herTab = 'kitchen'; return renderHeritage(); }
+  const nx = RECIPES[(RECIPES.indexOf(r) + 1) % RECIPES.length];
+  $('#stage').innerHTML = `
+    <button class="back" id="quit">‹ مطبخ الحبوبة</button>
+    <article class="card article">
+      <span style="height:8px;border-radius:4px;background:#8b3d1a"></span>
+      <div class="row-h"><h1>${esc(r.name)}</h1>${speakBtn('sp-r', 'اسمع الطريقة')}</div>
+      <p class="lead">${esc(r.sub)}</p>
+      <h2 style="font-size:1.3rem">المقادير</h2>
+      <ul class="ing">${r.ing.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
+      <h2 style="font-size:1.3rem">الطريقة</h2>
+      <ol class="steps">${r.steps.map(x => `<li>${esc(x)}</li>`).join('')}</ol>
+      <div class="factbox"><b>نصيحة الحبوبة</b><span>${esc(r.tip)}</span></div>
+    </article>
+    <button class="row-link" id="nxt"><span><small>الطبخة الجاية</small><b>${esc(nx.name)}</b><small>${esc(nx.sub)}</small></span><span class="chev" aria-hidden="true">‹</span></button>`;
+  $('#quit').addEventListener('click', () => go('kitchen'));
+  $('#nxt').addEventListener('click', () => go('recipe-' + nx.id));
+  $('#sp-r').addEventListener('click', () => speak(`${r.name}. المقادير: ${r.ing.join('، ')}. الطريقة: ${r.steps.join(' ')} ${r.tip}`));
+}
+function renderOcc() {
+  const list = occasions();
+  $('#her-body').innerHTML = `
+    <p class="muted">المناسبات الجاية والعدّ التنازلي ليها. الشهور الهجرية حسب تقويم أم القرى، وممكن تختلف يوم حسب رؤية الهلال.</p>
+    ${list.length ? list.map(o => `<div class="occ"><div><b>${esc(o.t)}</b><div class="when">${esc(gDate(o.date))}</div></div>
+      <div class="left">${o.days === 0 ? '<strong>النهارده</strong>' : `<strong>${AR(o.days)}</strong><span>يوم</span>`}</div><p>${esc(o.d)}</p></div>`).join('')
+      : '<div class="empty">ما قدرنا نحسب التواريخ في المتصفح ده.</div>'}
+    <div class="sec-h"><h2>مواسم بلدنا</h2></div>
+    ${SEASONS.map(s => `<div class="occ"><div><b>${esc(s.t)}</b><div class="when">${esc(s.w)}</div></div><span></span><p>${esc(s.d)}</p></div>`).join('')}`;
+}
+function renderNames() {
+  $('#her-body').innerHTML = `
+    <p class="muted">أسامي منتشرة عندنا ومعانيها.</p>
+    <input class="search" id="nm-q" type="search" placeholder="فتّش عن اسم…" value="${esc(S.namesQ)}" aria-label="فتّش عن اسم">
+    <div class="entries" id="nm-list"></div>`;
+  const fill = () => {
+    const q = S.namesQ.trim();
+    const list = NAMES.filter(x => !q || (x.n + ' ' + x.m).includes(q));
+    $('#nm-list').innerHTML = list.length ? list.map(x => `<div class="entry"><div class="t">${esc(x.n)}</div><span></span><div class="m">${esc(x.m)}</div></div>`).join('') : '<div class="empty">الاسم ده ما عندنا لسه.</div>';
+  };
+  $('#nm-q').addEventListener('input', e => { S.namesQ = e.target.value; fill(); });
+  fill();
+}
+function renderArticle(id) {
+  const a = ARTS.find(x => x.id === id); if (!a) { S.herTab = 'pages'; return renderHeritage(); }
+  const before = earnedIds();
+  if (!has(P.read, id)) { P.read.push(id); save(); }
+  const fresh = freshBadges(before);
+  const nx = ARTS[(ARTS.indexOf(a) + 1) % ARTS.length];
+  $('#stage').innerHTML = `
+    <button class="back" id="quit">‹ التراث</button>
+    <article class="card article">
+      <span style="height:8px;border-radius:4px;background:${a.col}"></span>
+      <div class="row-h"><h1>${esc(a.title)}</h1>${speakBtn('sp-a', 'اسمع الصفحة')}</div>
+      <p class="lead">${esc(a.sub)}</p>
+      ${a.p.map(t => `<p>${esc(t)}</p>`).join('')}
+      <div class="factbox"><b>هل كنت عارف؟</b><span>${esc(a.fact)}</span></div>
+      ${badgeHtml(fresh)}
+      ${a.game ? `<button class="btn block" id="play-rel">العب «${esc(gTitle(a.game))}»</button>` : ''}
+    </article>
+    <button class="row-link" id="nxt"><span><small>الصفحة الجاية</small><b>${esc(nx.title)}</b><small>${esc(nx.sub)}</small></span><span class="chev" aria-hidden="true">‹</span></button>`;
+  $('#quit').addEventListener('click', () => go('heritage'));
+  $('#nxt').addEventListener('click', () => go('art-' + nx.id));
+  $('#sp-a').addEventListener('click', () => speak(`${a.title}. ${a.p.join(' ')} ${a.fact}`));
+  const pr = $('#play-rel'); if (pr) pr.addEventListener('click', () => { S.play = null; go('play-' + a.game); });
+}
+
+/* ================= danagla ================= */
+function renderDanagla() {
+  const g = DATA.danagla;
+  $('#stage').innerHTML = `
+    <section class="dan-hero">${tabStrip()}<div class="in">
+      <h1>الدناقلة وناوا</h1>
+      <p>أهل دنقلا، أهل النيل والنخيل والجروف. ناوا بلدنا وأصلنا، ولو بعدنا، قلبنا هناك.</p>
+    </div></section>
+    <div class="pride"><span>النخيل</span><span>النيل</span><span>اللغة النوبية</span><span>الكرم</span><span>التاريخ العريق</span></div>
+
+    <section class="card dan-sec">
+      <h2>ناوا، بلدنا</h2>
+      <p>ناوا من بلدات الدناقلة في الشمالية. منها طلعنا، وفيها أهلنا الطيبين، والنيل والنخيل، وريحة الجروف بعد الدميرة.</p>
+      <p>أهل ناوا منتشرين في السودان وبرّه، لكن الإجازة والعيد والأفراح بترجّعهم للبلد، والكبار بيحكوا للصغار عن الحلّة زمان.</p>
+    </section>
+
+    ${famOk() ? `<section class="card dan-sec">
+      <div class="row-h"><h2>دفتر ناوا</h2><button class="btn ghost" id="add-nawa">أضف عن ناوا</button></div>
+      <p class="muted small">الحلّة زي ما بيحكيها أهلها: العائلات، الأماكن، الناس المعروفين، والذكريات. أي زول في العيلة يقدر يكتب.</p>
+      <div id="dan-nawa" class="stack"></div>
+    </section>` : ''}
+
+    <section class="card dan-sec">
+      <h2>منو الدناقلة؟</h2>
+      <p>«الدناقلة» يعني أهل دنقلا. هم من الشعوب النوبية الكبيرة، عايشين على النيل في الولاية الشمالية، بين الشلال التالت والدبّة، وعلى الجزر الكتيرة في النيل.</p>
+      <p>وجيرانهم في الشمال الشايقية والجعليين، وأقاربهم في النوبة الكنوز والمحس والسكوت والحلفاويين.</p>
+    </section>
+
+    <section class="card dan-sec">
+      <h2>لغتنا: الدنقلاوية</h2>
+      <p>الدناقلة عندهم لغة نوبية خاصة اسمها الدنقلاوية، وأهلها بسمّوها «الأنداندي». قريبة جداً من لغة الكنوز في مصر.</p>
+      <p>أكتر من بيتكلّمها هسّي الكبار، والعربي غلب في البيوت. لكن كل كلمة الحبوبة بتعلّمها للأحفاد بتحفظ اللغة.</p>
+      ${famOk() ? `<div class="row-h"><h2 style="font-size:1.2rem">كلمات من العيلة</h2><button class="btn ghost" id="add-word">أضف كلمة</button></div>
+      <div id="dan-words" class="stack"></div>` : ''}
+    </section>
+
+    <section class="card dan-sec">
+      <h2>تاريخنا</h2>
+      <div class="timeline">
+        <div><b>زمن كرمة</b>من أقدم الممالك في أفريقيا، قامت في أرض قريبة من دنقلا، ومن آثارها الدفوفة.</div>
+        <div><b>مملكة المقرة</b>دنقلا العجوز كانت عاصمة مملكة نوبية مسيحية قوية في العصور الوسطى.</div>
+        <div><b>سنة ١٣١٧</b>قاعة العرش في دنقلا العجوز اتحوّلت لمسجد، وبقت من أشهر آثار النوبة.</div>
+        <div><b>سنة ١٨٤٤</b>الإمام محمد أحمد المهدي اتولد في جزيرة لبب قرب دنقلا.</div>
+        <div><b>اليوم</b>دنقلا عاصمة الولاية الشمالية، والدناقلة منتشرين في كل السودان والعالم.</div>
+      </div>
+    </section>
+
+    <section class="card dan-sec">
+      <h2>الأرض والنخيل</h2>
+      <p>التمر هو المحصول الأشهر، ومن أصنافو البركاوي والقنديلة. النخلة عند الدناقلة زي فرد من الأسرة، بتتورّث وبيتحكى عنها.</p>
+      <p>والجروف هي الأرض الخصبة على ضفة النيل، بيزرعوا فيها بعد ما الموية تنزل. وزمان كانت الساقية بترفع موية النيل للزرع، وصوتها جزء من ذاكرة الشمال.</p>
+    </section>
+
+    <section class="card dan-sec">
+      <h2>من عاداتنا</h2>
+      <p>البيت الدنقلاوي مفتوح للضيف، والصينية بتطلع للحوش قبل ما الضيف يقعد. الأفراح بتلم البلد كلها، والكبار ليهم الكلمة والاحترام.</p>
+      <p>والدناقلة اشتهروا زمان بالتجارة والسفر في كل السودان، وكانوا بيفتحوا الدكاكين في البلاد البعيدة ويرجعوا للبلد بالخير.</p>
+    </section>
+
+    <button class="cta c-nile" id="dan-play"><span class="ic">${ICON.danagla}</span><span><b>اختبر نفسك عن الدناقلة</b><span>${AR(g.items.length)} سؤال · جمعت ${AR(gotCount('danagla'))}</span></span></button>
+    ${famOk() ? `<button class="cta" id="dongo-play" style="background:#0f4c6e;color:#fff"><span class="ic">${ICON.danagla}</span><span><b>اتكلّم دنقلاوي</b><span id="dongo-meta">${dongoMeta()}</span></span></button>` : ''}
+    <button class="row-link" id="dan-map"><span><b>وين البلد؟</b><small>دنقلا وكرمة وكريمة على خريطة النيل</small></span><span class="chev" aria-hidden="true">‹</span></button>`;
+  $('#dan-play').addEventListener('click', () => { S.play = null; go('play-danagla'); });
+  $('#dan-map').addEventListener('click', () => { S.play = null; go('play-khareeta'); });
+  const dp = $('#dongo-play'); if (dp) dp.addEventListener('click', () => { S.play = null; go('play-dongolawi'); });
+  const an = $('#add-nawa'); if (an) an.addEventListener('click', () => { S.famCat = 'nawa'; go('family'); });
+  const aw = $('#add-word'); if (aw) aw.addEventListener('click', () => { S.famCat = 'word'; go('family'); });
+  fillDanFamily();
+}
+function famUnavailableNote() {
+  if (FAM.status === 'loading') return '<p class="muted small">بنحمّل دفتر العيلة…</p>';
+  if (FAM.status === 'slow') return '<p class="muted small">دفتر العيلة ما وصل لسه. اتأكد من النت.</p>';
+  if (FAM.status === 'off' || FAM.status === 'error') return '<p class="muted small">دفتر العيلة بيشتغل لمّا تفتح ونسة من الرابط وإنت مسجّل دخول.</p>';
+  return '';
+}
+function fillDanFamily() {
+  const nawa = $('#dan-nawa'), words = $('#dan-words'), meta = $('#dongo-meta');
+  if (meta) meta.textContent = dongoMeta();
+  const note = famUnavailableNote();
+  if (nawa) {
+    const list = famStories('nawa');
+    nawa.innerHTML = note || (list.length ? list.slice(0, 12).map(storyHtml).join('') : '<div class="empty">لسه ما في زول كتب عن ناوا. كن الأول!</div>');
+    bindStoryDeletes(nawa);
+  }
+  if (words) {
+    const ws = DATA.dongolawi.items;
+    words.innerHTML = note || (ws.length ? ws.map(w => `<div class="entry"><div class="t">${esc(w.q)}</div><span></span><div class="m">${esc(w.a)}</div><div class="n">${esc(w.n)}</div></div>`).join('') : '<div class="empty">ما في كلمات لسه. اطلب من الحبوبة أو أبوك كلمة، واكتبها هنا.</div>');
+  }
+}
+
+/* ================= family board ================= */
+const CATS = { hikaya:'حكاوي زمان', nawa:'عن ناوا', word:'كلمة دنقلاوية' };
+function renderFamily() {
+  $('#stage').innerHTML = `
+    <h1 class="page-h">لوحة العيلة</h1>
+    <p class="muted">كل العيلة في مكان واحد: مين جامع فناجين أكتر، وحكاوي زمان، ودفتر ناوا، وكلماتنا الدنقلاوية.</p>
+    <div id="fam-join"></div>
+    <div class="sec-h"><h2>ترتيب العيلة</h2><span>بالفناجين</span></div>
+    <div id="fam-board" class="board"></div>
+    <div class="sec-h"><h2>دفتر العيلة</h2></div>
+    <section class="card" id="fam-compose"></section>
+    <div class="seg" role="group" aria-label="نوع الكتابات" id="fam-filter"></div>
+    <div id="fam-stories" class="stack"></div>`;
+  renderCompose();
+  fillFamilyJoin(); fillFamilyBoard(); fillFamilyStories();
+}
+function fillFamilyJoin() {
+  const el = $('#fam-join'); if (!el) return;
+  if (FAM.status !== 'ready') {
+    const off = FAM.status === 'off' || FAM.status === 'error';
+    el.innerHTML = `<div class="notice">${famUnavailableNote()}${off ? '<p class="small">الألعاب كلها شغّالة عادي، بس اللوحة والدفتر محتاجين حساب Claude وإذن مشاركة من صاحب ونسة.</p>' : ''}</div>`;
+    return;
+  }
+  if (FAM.me && FAM.me.name && !S.renaming) {
+    el.innerHTML = `<div class="notice"><div class="row-h"><span>إنت في اللوحة باسم <b>${esc(FAM.me.name)}</b></span><button class="btn ghost" id="rename">غيّر الاسم</button></div></div>`;
+    $('#rename').addEventListener('click', () => { S.renaming = true; fillFamilyJoin(); });
+    return;
+  }
+  el.innerHTML = `<section class="card">
+    <b style="font-size:1.15rem">${FAM.me && FAM.me.name ? 'غيّر اسمك في اللوحة' : 'انضم للوحة العيلة'}</b>
+    <p class="muted small">اكتب الاسم البتعرفك بيهو العيلة، زي «حبوبة آمنة» أو «عمّو الطيب». فناجينك بتظهر جنبو.</p>
+    <div class="field"><label for="fam-name">اسمك</label><input id="fam-name" maxlength="24" value="${esc(FAM.me && FAM.me.name || '')}" placeholder="الاسم"></div>
+    <button class="btn block" id="fam-join-btn">${FAM.me && FAM.me.name ? 'احفظ' : 'انضم'}</button></section>`;
+  $('#fam-join-btn').addEventListener('click', async () => {
+    const name = $('#fam-name').value.trim();
+    if (!name) { toast('اكتب اسمك الأول.'); return; }
+    const before = earnedIds();
+    S.renaming = false;
+    await writeMe(b => { b.name = name; b.cups = P.cups; });
+    const f = freshBadges(before); if (f.length) toast('وسام جديد: ' + f[0].t);
+    fillFamilyJoin();
+  });
+}
+function fillFamilyBoard() {
+  const el = $('#fam-board'); if (!el) return;
+  if (FAM.status !== 'ready') { el.innerHTML = ''; return; }
+  const list = FAM.members.filter(m => m.name).sort((a,b) => (b.cups||0) - (a.cups||0));
+  el.innerHTML = list.length ? list.map((m,k) => `<div class="brow ${m.id === FAM.uid ? 'me' : ''}">
+      <span class="pos ${k<3 ? 'p'+(k+1) : ''}">${AR(k+1)}</span>
+      <span><b>${esc(m.name)}${m.id === FAM.uid ? ' (إنت)' : ''}</b><small>${esc(m.rank || rankOf(m.cups||0).r.t)}</small></span>
+      <span class="c">${ICON.cup}${AR(m.cups||0)}</span></div>`).join('')
+    : '<div class="empty">ما في زول انضم لسه. انضم إنت الأول، وأرسل الرابط للعيلة.</div>';
+}
+function renderCompose() {
+  const el = $('#fam-compose'); if (!el) return;
+  const cat = S.famCat in CATS ? S.famCat : 'hikaya';
+  el.innerHTML = `
+    <b style="font-size:1.15rem">اكتب في الدفتر</b>
+    <div class="seg" role="group" aria-label="نوع الكتابة">${Object.entries(CATS).map(([id,t]) => `<button data-c="${id}" aria-pressed="${cat===id}">${t}</button>`).join('')}</div>
+    ${cat === 'word' ? `
+      <div class="two"><div class="field"><label for="w-w">الكلمة بالدنقلاوي</label><input id="w-w" maxlength="40" placeholder="اكتبها زي ما بتنطق"></div>
+      <div class="field"><label for="w-m">معناها بالعربي</label><input id="w-m" maxlength="60" placeholder="المعنى"></div></div>
+      <div class="field"><label for="w-n">ملاحظة (اختياري)</label><input id="w-n" maxlength="80" placeholder="مثلاً: كانت بتقولها حبوبتي للشفّع"></div>`
+    : `
+      <div class="field"><label for="s-t">العنوان</label><input id="s-t" maxlength="60" placeholder="${cat === 'nawa' ? 'مثلاً: بيت جدّي في ناوا' : 'مثلاً: أول يوم في المدرسة'}"></div>
+      <div class="field"><label for="s-b">الحكاية</label><textarea id="s-b" maxlength="800" placeholder="احكي زي ما بتحكي في القعدة"></textarea></div>`}
+    <button class="btn block" id="save-entry">احفظ في الدفتر</button>`;
+  el.querySelectorAll('.seg button').forEach(b => b.addEventListener('click', () => { S.famCat = b.dataset.c; renderCompose(); }));
+  $('#save-entry').addEventListener('click', saveEntry);
+}
+async function saveEntry() {
+  if (FAM.status !== 'ready') { toast('الدفتر ما شغّال هنا. افتح ونسة من الرابط وإنت مسجّل دخول.'); return; }
+  if (!FAM.me || !FAM.me.name) { toast('انضم للوحة العيلة باسمك الأول.'); const f = $('#fam-name'); if (f) f.focus(); return; }
+  const cat = S.famCat in CATS ? S.famCat : 'hikaya';
+  const before = earnedIds();
+  if (cat === 'word') {
+    const w = $('#w-w').value.trim(), m = $('#w-m').value.trim(), n = $('#w-n').value.trim();
+    if (!w || !m) { toast('اكتب الكلمة ومعناها.'); return; }
+    if ((FAM.me.words || []).length >= 150) { toast('كتبت كلمات كتيرة. امسح القديمة عشان تزيد.'); return; }
+    await writeMe(b => { b.words.push({ id: rid(), w, m, note: n, at: Date.now() }); });
+  } else {
+    const t = $('#s-t').value.trim(), body = $('#s-b').value.trim();
+    if (!body) { toast('اكتب الحكاية الأول.'); return; }
+    if ((FAM.me.stories || []).length >= 80) { toast('الدفتر بتاعك اتملا. امسح حكاية قديمة عشان تزيد.'); return; }
+    await writeMe(b => { b.stories.push({ id: rid(), cat, title: t, body, at: Date.now() }); });
+  }
+  toast('اتحفظت في الدفتر.');
+  const f = freshBadges(before); if (f.length) setTimeout(() => toast('وسام جديد: ' + f[0].t), 1500);
+  renderCompose();
+}
+function storyHtml(s) {
+  const mine = s.owner === FAM.uid, canDel = mine || FAM.owner;
+  let when = ''; try { when = new Intl.DateTimeFormat('ar-EG', { day:'numeric', month:'long', year:'numeric' }).format(new Date(s.at)); } catch(e) {}
+  const body = s.cat === 'word' ? 'المعنى: ' + (s.m || '') + (s.note ? '\n' + s.note : '') : (s.body || '');
+  return `<div class="story"><div class="t"><span class="cat-tag">${esc(CATS[s.cat] || '')}</span>${esc(s.cat === 'word' ? s.w : (s.title || ''))}</div>
+    ${canDel ? `<button class="icon-btn del" data-o="${esc(s.owner)}" data-id="${esc(s.id)}" data-kind="${s.cat === 'word' ? 'words' : 'stories'}" aria-label="امسح">${ICON.trash}</button>` : '<span></span>'}
+    <div class="b">${esc(body)}</div>
+    <div class="by">كتبها ${esc(s.by)}${when ? ' · ' + when : ''}</div></div>`;
+}
+function bindStoryDeletes(root) {
+  root.querySelectorAll('.del').forEach(b => b.addEventListener('click', () => {
+    const owner = b.dataset.o, id = b.dataset.id, kind = b.dataset.kind;
+    if (b.dataset.sure !== '1') { b.dataset.sure = '1'; b.style.color = 'var(--bad)'; toast('اضغط تاني عشان تمسحها.'); return; }
+    if (owner === FAM.uid) writeMe(x => { x[kind] = (x[kind] || []).filter(s => s.id !== id); });
+    else {
+      const m = FAM.members.find(z => z.id === owner); if (!m) return;
+      FAM.db.doc('family/' + owner).update({ [kind]: (m[kind] || []).filter(s => s.id !== id) }).catch(e => toast(writeErr(e)));
+    }
+  }));
+}
+function fillFamilyStories() {
+  const el = $('#fam-stories'), fl = $('#fam-filter'); if (!el) return;
+  const f = S.famFilter || 'all';
+  if (fl) {
+    fl.innerHTML = [['all','الكل'], ...Object.entries(CATS)].map(([id,t]) => `<button data-f="${id}" aria-pressed="${f===id}">${t}</button>`).join('');
+    fl.querySelectorAll('button').forEach(b => b.addEventListener('click', () => { S.famFilter = b.dataset.f; fillFamilyStories(); }));
+  }
+  if (FAM.status !== 'ready') { el.innerHTML = famUnavailableNote(); return; }
+  let list = [];
+  if (f !== 'word') list = famStories(f === 'all' ? null : f);
+  if (f === 'all' || f === 'word') {
+    FAM.members.forEach(m => (m.words || []).forEach(w => list.push(Object.assign({ by: m.name || 'واحد من العيلة', owner: m.id, cat:'word' }, w))));
+    list.sort((a,b) => (b.at||0) - (a.at||0));
+  }
+  el.innerHTML = list.length ? list.map(storyHtml).join('') : '<div class="empty">الدفتر فاضي لسه. اكتب أول حكاية!</div>';
+  bindStoryDeletes(el);
+}
+
+/* ================= me / settings ================= */
+function renderMe() {
+  const { r, nx } = rankOf(P.cups);
+  const BADGES = window.BADGES_ALL.filter(b => famOk() || !['board','rawi'].includes(b.id));
+  const earned = earnedIds().filter(id => BADGES.some(b => b.id === id));
+  const total = COLLECT.reduce((s,g) => s + DATA[g].items.length, 0);
+  const got = COLLECT.reduce((s,g) => s + gotCount(g), 0);
+  const themes = [['auto','تلقائي'],['light','نهاري'],['dark','ليلي'],['nile','ليل النيل']];
+  $('#stage').innerHTML = `
+    <h1 class="page-h">إنجازاتي والإعدادات</h1>
+    <section class="rank-card">
+      <span style="font-size:.95rem;opacity:.9">لقبك</span>
+      <div class="r">${r.t}</div>
+      <div class="bar"><i style="width:${nx ? Math.round((P.cups - r.min) / (nx.min - r.min) * 100) : 100}%"></i></div>
+      <span style="font-size:1rem">${nx ? `فاضل ${AR(nx.min - P.cups)} فنجان لـ«${nx.t}»` : 'وصلت أعلى لقب. ما شاء الله!'}</span>
+    </section>
+    <div class="stats">
+      <div class="stat"><b>${AR(P.cups)}</b><span>فنجان</span></div>
+      <div class="stat"><b>${AR(streak())}</b><span>أيام ورا بعض</span></div>
+      <div class="stat"><b>${AR(got)}</b><span>من ${AR(total)} اتجمعت</span></div>
+    </div>
+    <div class="sec-h"><h2>الإعدادات</h2></div>
+    <section class="card">
+      <span style="font-weight:600">الشكل</span>
+      <div class="opt-row" id="simple-row"><button data-s="0" aria-pressed="${!P.simple}">كامل</button><button data-s="1" aria-pressed="${P.simple}">بسيط</button></div>
+      <p class="muted small">الشكل البسيط فيهو الرئيسية والألعاب بس، بخط كبير وأزرار أقل. الكامل فيهو كمان التراث والمطبخ والدناقلة.</p>
+      <span style="font-weight:600">الألوان</span>
+      <div class="opt-row" id="th-row">${themes.map(([id,t]) => `<button data-th="${id}" aria-pressed="${P.theme===id}">${t}</button>`).join('')}</div>
+      <span style="font-weight:600">حجم الخط</span>
+      <div class="opt-row" id="fs-row">${['عادي','كبير','أكبر'].map((t,i) => `<button data-fs="${i}" aria-pressed="${P.fs===i}" style="font-size:${[1,1.15,1.3][i]}rem">${t}</button>`).join('')}</div>
+    </section>
+    <div class="sec-h"><h2>الأوسمة</h2><span>${AR(earned.length)} من ${AR(BADGES.length)}</span></div>
+    <div class="badges">${BADGES.map(b => `<div class="badge ${has(earned,b.id)?'':'off'}">${medal(b.c)}<b>${esc(b.t)}</b><span>${esc(b.d)}</span></div>`).join('')}</div>
+    <div class="sec-h"><h2>صندوقي</h2><span>اللي جاوبتو صاح</span></div>
+    <section class="card coll">${COLLECT.map(id => { const g = DATA[id], c = gotCount(id); return `<div class="coll-row"><span>${esc(g.title)}</span><div class="bar"><i style="width:${Math.round(c/g.items.length*100)}%"></i></div><span>${AR(c)}/${AR(g.items.length)}</span></div>`; }).join('')}
+      <div class="coll-row"><span>ذكريات الطفولة</span><div class="bar"><i style="width:${Math.round(P.lived.length/KID_TOTAL*100)}%"></i></div><span>${AR(P.lived.length)}/${AR(KID_TOTAL)}</span></div></section>
+    <div class="sec-h"><h2>الألقاب</h2></div>
+    <section class="card coll">${RANKS.map(x => `<div class="coll-row" style="grid-template-columns:1fr auto"><span style="${x===r?'font-weight:700;color:var(--accent)':''}">${x.t}${x===r?' ← إنت هنا':''}</span><span>${AR(x.min)} فنجان</span></div>`).join('')}</section>
+    <div id="reset-area"><button class="btn ghost block" id="reset">ابدأ من جديد</button></div>`;
+  $('#simple-row').querySelectorAll('button').forEach(b => b.addEventListener('click', () => { P.simple = b.dataset.s === '1'; if (P.simple && P.fs < 1) setFs(1); save(); renderChrome(); renderMe(); }));
+  $('#th-row').querySelectorAll('button').forEach(b => b.addEventListener('click', () => { P.theme = b.dataset.th; save(); applyTheme(); renderChrome(); renderMe(); }));
+  $('#fs-row').querySelectorAll('button').forEach(b => b.addEventListener('click', () => { setFs(+b.dataset.fs); renderChrome(); renderMe(); }));
+  $('#reset').addEventListener('click', () => {
+    $('#reset-area').innerHTML = `<div class="confirm"><b>متأكد؟ الفناجين والأوسمة والمحفوظات وذكريات الطفولة البتاعة التلفون ده بتتمسح. دفتر العيلة ما بيتمسح.</b>
+      <div class="two"><button class="btn" id="yes" style="background:var(--bad);color:#fff">أيوه، امسح</button><button class="btn ghost" id="no">لا، خلّيها</button></div></div>`;
+    $('#yes').addEventListener('click', () => { const { fs, theme, simple, autoRead } = P; P = Object.assign({}, DEF, { fs, theme, simple, autoRead }); save(); syncCups(); renderChrome(); renderMe(); });
+    $('#no').addEventListener('click', renderMe);
+  });
+}
+
+/* ================= boot ================= */
+function start(data) {
+  if (data && data.S) S = Object.assign(S, data.S);
+  route();
+  initFamily();
+}
+window.claude?.hot?.snapshot?.(() => ({ S }));
+window.claude?.hot?.ready ? window.claude.hot.ready(start) : start(window.claude?.hot?.data ?? {});
+</script>
+</body></html>
